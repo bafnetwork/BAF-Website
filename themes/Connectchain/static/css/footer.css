@@ -1,0 +1,88 @@
+.footer{
+    width: 100%;
+    height: 80%;
+    background-color: var(--fg);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.footer-content{
+    width: 100%;
+    height: 90%;
+    display: flex;
+}
+
+.content-section{
+    height: 100%;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    align-content: center;
+}
+
+ #footer-left{
+    padding-top: 3%;
+ }
+
+.subfooter{
+    height: 5%;
+    width: 100%;
+    display: flex;
+}
+
+#footer-logo{
+    width: 50%;
+}
+
+.footer-links{
+    padding: 5px;
+    text-decoration: none;
+    color: var(--primary);
+}
+
+.footer-links a:visited{
+    text-decoration: none;
+    color: var(--primary);
+}
+
+.footer-links:hover{
+    cursor: pointer;
+    transition: 100ms ease;
+    transform: translateY(-5px);
+    transition: transform .3s;
+}
+
+.social-btn:hover{
+    cursor: pointer;
+    transition: 100ms ease;
+    transform: translateY(-5px);
+    transition: transform .3s;
+}
+
+.clear {
+    padding: 5px;
+    margin-left: 23%;
+}
+
+#mc-embedded-subscribe{
+    border-radius: 5px;
+    padding: 7px;
+    background-color: var(--primary);
+    color: var(--BAFWhite);
+    border: none;
+}
+
+#mc-embedded-subscribe:hover{
+    background-color: var(--secondary);
+    color: var(--primary);
+    cursor: pointer;
+    transition: 100ms ease;
+    transform: translateY(-5px);
+    transition: transform .3s;
+
+}
