@@ -1,53 +1,104 @@
-<div class = "navbar">
+<nav id = "navbar">
 
-    <div class = "nav-top-section">
+  <div class = "navbar-top">
 
-        <div class = "logo-container">
-            <a id = "nav-logo-link" href = "#"><img id = "nav-logo" src = "img/logonavbar.png"></a>
-        </div>
-        
-        <div class = "themeContainer">
-            <i class="fa fa-sun-o fa-lg" id = "themeswitcher"></i>
-            <i class = "fa fa-moon-o fa-lg" id = "themeswitcher-moon"></i>
-        </div>
-        
-
+    <div class = "logoContainer">
+      <a id = "nav-logo-link"><img id = "nav-logo" src = "/img/logonavbar.png"></a>
     </div>
+
+    <div class = "themeContainer">
+      <i class = "fa fa-moon-o fa-2x" id = "theme-switcher"></i>
+    </div>
+
+    <div class = "menuContainer" onclick="myFunction()">
+      <i class = "fa fa-bars fa-2x" id = "hamburgerMenu"></i>
+    </div>
+
+    <script>
+
+      // media query event handler
+if (matchMedia) {
+  const mq = window.matchMedia("(min-width: 600px)");
+  mq.addListener(WidthChange);
+  WidthChange(mq);
+}
+
+// media query change
+function WidthChange(mq) {
+  if (mq.matches) {
+      document.getElementsByClassName('menuContainer')[0].style.display = "none";
+      document.getElementsByClassName("nav-links")[0].style.visibility = "visible";
+      document.getElementsByClassName("nav-links")[0].style.opacity = "1";
+  } else {
+      document.getElementsByClassName('menuContainer')[0].style.display = "block";
+      document.getElementsByClassName("nav-links")[0].style.visibility = "hidden";
+      document.getElementsByClassName("nav-links")[0].style.opacity = "0";
+  }
+
+}
+
+    </script>
+
+  </div>
+
+  <div class = "nav-links">
+
+    <div class = "menu-items-container">
+      <!-- This is the About Button on the header -->
+      <div  class = "dropdown">
+        <a class = "dropMasterLink" href = "#">About 
+          <i class="fa fa-caret-down"></i>
+        </a>
+        <div class = "dropdown-content" id="aboutContent">
+          <a href="#">Our Foundation</a>
+          <a href="#">Values</a>
+          <a href="#">Team</a>
+          <a href="#">FAQ</a>
+        </div>
+    </div>
+
+        <!-- This is the Programs Button -->
+    <div class = "dropdown">
+        <a class = "dropMasterLink" href = "#">Programs 
+          <i class="fa fa-caret-down"></i>
+        </a>
+        <div class = "dropdown-content" id="programsContent">
+          <a href="#">Accredited Courses</a>
+          <a href="#">Events</a>
+          <a href="#">Recruiting</a>
+          <a href="#">Projects</a>
+        </div>
+    </div>
+
+    <a class = "NavItem" href = "#">The Hub</a>
+    <a class = "NavItem" href = "#">Resources</a>
+    <a class = "NavItem" href = "#">Get in Touch</a>
+    </div>
+
+    <script type = "text/javascript">
+      $(function () {
+        $('.dropMasterLink').doubleTapToGo();
+    });
+  
+      function myFunction() {
+        var navMenuMobile = document.getElementsByClassName("nav-links")[0];
+        var navMenuSymbol = document.getElementById("hamburgerMenu");
+
+        if (navMenuMobile.style.visibility == "visible") {
+          navMenuSymbol.setAttribute('class', 'fa fa-bars fa-2x');
+          navMenuMobile.style.visibility = "hidden";
+          navMenuMobile.style.opacity = "0";
+          
+        } else {
+          navMenuSymbol.setAttribute('class', 'fa fa-times fa-2x');
+          navMenuMobile.style.visibility = "visible";
+          navMenuMobile.style.opacity = "1";
+        }
+      }
+
+    </script>
     
-
-
-    <div class = "nav-links">
-
-        <!-- This is the About Button on the header -->
-        <div  class = "dropdown">
-            <a href = "#">About 
-              <i class="fa fa-caret-down"></i>
-            </a>
-            <div class = "dropdown-content" id="aboutContent">
-              <a href="#">Our Foundation</a>
-              <a href="#">Values</a>
-              <a href="#">Team</a>
-              <a href="#">FAQ</a>
-            </div>
-        </div>
-
-            <!-- This is the Programs Button -->
-        <div class = "dropdown">
-            <a href = "#">Programs 
-              <i class="fa fa-caret-down"></i>
-            </a>
-            <div class = "dropdown-content" id="programsContent">
-              <a href="#">Accredited Courses</a>
-              <a href="#">Events</a>
-              <a href="#">Recruiting</a>
-              <a href="#">Projects</a>
-            </div>
-        </div>
-
-        <a class = "NavItem" href = "#">The Hub</a>
-        <a class = "NavItem" href = "#">Resources</a>
-        <a class = "NavItem" href = "#">Get in Touch</a>
-        
-    </div>
-
 </div>
+
+</nav>
+

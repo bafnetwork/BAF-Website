@@ -1,4 +1,4 @@
-const btn = document.getElementById("themeswitcher");
+const btn = document.getElementById("theme-switcher");
 
 const currentTheme = localStorage.getItem("theme");
 if (currentTheme == "dark") {
