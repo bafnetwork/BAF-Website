@@ -50,6 +50,7 @@
     transition: 100ms ease;
     transform: translateY(-5px);
     transition: transform .3s;
+    text-decoration: underline;
 }
 
 .social-btn:hover{
@@ -75,20 +76,26 @@
 }
 
 #mc-embedded-subscribe{
-    border-radius: 5px;
     padding: 7px;
-    background-color: var(--primary);
-    color: var(--BAFWhite);
+    background-image: linear-gradient(to right, var(--secondary) 0%, var(--primary) 100%);
+    background-size: 200% auto;
+    color: white;
+    font-family: 'Futura', sans-serif;
+    font-size: 1.2rem;
+    box-shadow: none;
     border: none;
+    border-radius: 8px;
+    transition: 0.5s;
 }
 
 #mc-embedded-subscribe:hover{
-    background-color: var(--secondary);
-    color: var(--primary);
     cursor: pointer;
-    transition: 100ms ease;
+    transition: 0.5s ease;
     transform: translateY(-5px);
     transition: transform .3s;
+    box-shadow: 0 7px 5px -6px rgb(0 0 0 / 40%), 0 6px 6px 0 rgb(0 0 0 / 28%), 0 5px 9px 0 rgb(0 0 0 / 24%);
+    background-position: right center;
+    font-weight: bold;
 
 }
 

@@ -3,7 +3,7 @@
   <div class = "navbar-top">
 
     <div class = "logoContainer">
-      <a id = "nav-logo-link"><img id = "nav-logo" src = "/img/logonavbar.png"></a>
+      <a id = "nav-logo-link"><img id = "nav-logo" src = "/img/BAF-Branding/logonavbar.png"></a>
     </div>
 
     <div class = "themeContainer">
@@ -13,31 +13,6 @@
     <div class = "menuContainer" onclick="myFunction()">
       <i class = "fa fa-bars fa-2x" id = "hamburgerMenu"></i>
     </div>
-
-    <script>
-
-      // media query event handler
-if (matchMedia) {
-  const mq = window.matchMedia("(min-width: 600px)");
-  mq.addListener(WidthChange);
-  WidthChange(mq);
-}
-
-// media query change
-function WidthChange(mq) {
-  if (mq.matches) {
-      document.getElementsByClassName('menuContainer')[0].style.display = "none";
-      document.getElementsByClassName("nav-links")[0].style.visibility = "visible";
-      document.getElementsByClassName("nav-links")[0].style.opacity = "1";
-  } else {
-      document.getElementsByClassName('menuContainer')[0].style.display = "block";
-      document.getElementsByClassName("nav-links")[0].style.visibility = "hidden";
-      document.getElementsByClassName("nav-links")[0].style.opacity = "0";
-  }
-
-}
-
-    </script>
 
   </div>
 
@@ -78,7 +53,7 @@ function WidthChange(mq) {
     <script type = "text/javascript">
       $(function () {
         $('.dropMasterLink').doubleTapToGo();
-    });
+    }); 
   
       function myFunction() {
         var navMenuMobile = document.getElementsByClassName("nav-links")[0];

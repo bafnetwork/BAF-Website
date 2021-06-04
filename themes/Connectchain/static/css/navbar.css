@@ -8,7 +8,6 @@ nav {
   box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
   padding: 1rem;
   background-color: var(--fg);
-  overflow: hidden;
 }
 
 /* Navbar-Top Stylings */
@@ -49,6 +48,7 @@ nav {
   flex-direction: row;
   background-color: var(--bg);
   padding: 0.5rem;
+  padding-bottom: 1rem;
   position: absolute;
   justify-content: center;
   align-items: center;
@@ -133,7 +133,7 @@ text-decoration: underline;
   
   
   nav{
-    height: 18%;
+    height: 20%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -151,7 +151,6 @@ text-decoration: underline;
     align-items: center;
     justify-content: center;
 }
-
 
 .logoContainer{
     align-content: center;
@@ -188,6 +187,13 @@ text-decoration: underline;
   color: var(--primary);
 }
 
+#theme-switcher:hover{
+  color: var(--secondary);
+  transition: 100ms ease;
+  transform: translateY(-5px);
+  transition: transform .3s;
+}
+
 .menuContainer{
   visibility: hidden;
 }
@@ -201,7 +207,7 @@ text-decoration: underline;
   flex-direction: row;
   justify-content: center;
   color: var(--primary);
-  position: unset;
+  position: relative;
   top: 0;
 }
 

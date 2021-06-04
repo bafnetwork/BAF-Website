@@ -1,8 +1,11 @@
 const btn = document.getElementById("theme-switcher");
 
 const currentTheme = localStorage.getItem("theme");
+
+
 if (currentTheme == "dark") {
   document.body.classList.add("dark-theme");
+  document.getElementById("theme-switcher").setAttribute("class", "fa fa-sun-o fa-2x");
 }
 
 btn.addEventListener("click", function () {
@@ -14,4 +17,5 @@ btn.addEventListener("click", function () {
   }
   localStorage.setItem("theme", theme);
   location.reload();
+  document.getElementById("theme-switcher").setAttribute("class", "fa fa-sun-o fa-2x");
 });

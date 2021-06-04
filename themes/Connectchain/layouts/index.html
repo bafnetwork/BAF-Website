@@ -2,17 +2,142 @@
 
 {{partial "navbar.html" . }}
 
-    <body class = "light" style = "display: flex; flex-direction: column;">
+<main>
 
-        <div style = "height: 100%; width: 100%;">
-            <h1>Heading One</h1>
-            <h2>Heading Two</h2>
-            <h3>Heading Three</h3>
-            <h4>Heading Four</h4>
-            <h5>Heading Fiver</h5>
+    <body class = "light" style = "width: 100%;">
+
+        <div class = "hero">
+            <div class = "hero-info">
+                <h1>Accelerating Blockchain Education & Adoption</h1>
+                <p>BAF is an incentive-aligned organization that coordinates talent and capital to accelerate blockchain adoption, development, and education.</p>
+
+                <div id = "heroCallToAction">
+                    <button id = "LearnMoreBtn" href = "#">Learn More</button>
+                </div>
+
+            </div>
+
+            <div class = "hero-picture"></div>
+
         </div>
-        
+
+        <div class = "home-section" id = "home-who-we-are">
+
+            <div class = "section-info" id = "who-info">
+                <h2>Who We Are</h2>
+                <p>Satoshi Nakamoto launched lots of decentralisation when Litecoin required many decentralised application, for Augur limited some public key behind lots of multi signature. Blockchain thought some robust smart contract in a algorithm!</p>
+            </div>
+
+            <div class = "cards-container">
+
+                <div class = "card side-card" id = "educate-card">
+                    <img src = "/img/Icons/baf-curriculum.svg">
+                    <h3>Educate</h3>
+                    <p>Satoshi Nakamoto launched lots of decentralisation when Litecoin required many decentralised application, for Augur limited some public key behind lots of multi signature. Blockchain thought some robust smart contract in a algorithm! </p>
+                </div>
+
+                <div class = "card center-card" id = "connect-card">
+                    <img src = "/img/Icons/collaboration.svg">
+                    <h3>Connect</h3>
+                    <p>Satoshi Nakamoto launched lots of decentralisation when Litecoin required many decentralised application, for Augur limited some public key behind lots of multi signature. Blockchain thought some robust smart contract in a algorithm!</p>
+                </div>
+
+                <div class = "card side-card" id = "implement-card">
+                    <img src = "/img/Icons/research.svg">
+                    <h3>Implement</h3>
+                    <p>Satoshi Nakamoto launched lots of decentralisation when Litecoin required many decentralised application, for Augur limited some public key behind lots of multi signature. Blockchain thought some robust smart contract in a algorithm!</p>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class = "home-section" id = "home-what-we-do">
+            <h2>What We Do</h2>
+            <div class = "do-list">
+
+                <div class = "top-row">
+
+                    <div class = "do-item" id = "courses">
+                        <img src = '/img/Icons/studentuniversity-building.svg'>
+                        <div class = "do-item-text">
+                            <h4>Accredited Courses</h4>
+                            <p>We build curriculum and source speakers for university blockchain courses.</p>
+                        </div>
+                    </div>
+    
+                    <div class = "do-item" id = "conferences">
+                        <img src = '/img/Icons/conference.svg'>
+                        <div class = "do-item-text">
+                            <h4>Conferences</h4>
+                            <p>We organize conferences exploring blockchain fundamentals and cutting-edge topics.</p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class = "bottom-row">
+                    <div class = "do-item" id = "meetups">
+                        <img src = '/img/Icons/students-engages.svg'>
+                        <div class = "do-item-text">
+                            <h4>Meetups</h4>
+                            <p>Lorom ipsum dolorom sit and hit the whip like whoa.</p>
+                        </div>
+                    </div>
+    
+                    <div class = "do-item" id = "hackathons">
+                        <img src = '/img/Icons/hackathons.svg'>
+                        <div class = "do-item-text">
+                            <h4>Hackathons</h4>
+                            <p>We source sponsors and mentors for university-affiliated hackathons.</p>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- Add stuff: Focus groups, recruiting -->
+
+            </div>
+        </div>
+
+        <div class = "home-banner" id = "join-us">
+            <h3>Ready to join?</h3>
+            <i class="fa fa-long-arrow-right fa-4x" aria-hidden="true" id = "join-us-arrow" style = "color: white;"></i>
+            <button id = "join-button">Become a member</button>
+        </div>
+
+        <div class = "home-section" id = "connection-section">
+            <div class = "connection-internal" id = "connection-left">
+                <h1>Connection</h1>
+                <h2>is the <i class = "fa fa-heart"></i> of BAF</h2>
+            </div>
+            <div class = "connection-internal" id = "connection-right">
+                <h4>By connecting people and organizations we can accelerate the adoption of blockchain and build a better future, one block at a time.</h4>
+            </div>
+        </div>
+
+        <div class = "home-banner" id = "stats">
+
+        </div>
+
+        <div class = "home-section" id = "map">
+
+        </div>
+
+        <div class = "home-section" id = "members">
+
+        </div>
+
+        <div class = "home-section" id = "education-section">
+
+        </div>
+
+        <div class = "home-projects-section">
+
+        </div>
 
     </body>
+
+</main>
 
     {{partial "footer.html" . }}
