@@ -1,0 +1,78 @@
+@import '/css/navbar.css';
+@import '/css/footer.css';
+@import '/css/index.css';
+
+
+/* Color Variables Go Here */
+:root {
+
+    --BAFWhite: white;
+    --BAFBold: #003262;
+    --BAFLightBlue: #87D3DD;
+    --BAFTextBlack: rgb(41, 41, 41);
+    --BAFBlack: #171412;
+    --BAFGrey: #2A2E35;
+
+}
+
+.light {  
+    /*Color Profile for Light Mode*/
+    --bg: var(--BAFWhite);
+    --fg: var(--BAFWhite);
+    --textNormal: var(--BAFTextBlack);
+    --textAlternative: var(--BAFWhite);
+    --primary: var(--BAFBold);
+    --secondary: var(--BAFLightBlue);
+}
+
+.dark-theme {
+    --bg: var(--BAFBlack);
+    --fg: var(--BAFGrey);
+    --textNormal: var(--BAFWhite);
+    --textAlternative: var(--BAFTextBlack);
+    --primary: var(--BAFLightBlue);
+    --secondary: var(--BAFBold);
+}
+
+/* Fonts & Text */
+@font-face {
+	font-family: 'Futura';
+	src: url("/fonts/Futura.woff");
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+body{
+    overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6{
+    font-family: 'Futura', sans-serif;
+    color: var(--primary);
+}
+
+h1 {
+    font-size: 3.5rem;
+}
+
+h2 {
+    font-size: 3rem;
+}
+
+h3 {
+    font-size: 2.5rem;
+}
+
+h4 {
+    font-size: 2rem;
+}
+
+h5{
+    font-size: 1.5rem;
+}
+
+p, a {
+    font-size: 1.2rem;
+    font-family: 'Lato', sans-serif;
+    color: var(--textNormal);
+}

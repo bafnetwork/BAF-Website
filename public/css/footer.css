@@ -1,0 +1,107 @@
+.footer{
+    width: 100%;
+    background-color: var(--fg);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.footer-content{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.content-section{
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-content: center;
+    align-items: center;
+}
+
+
+.subfooter{
+    height: 5%;
+    width: 100%;
+    display: flex;
+}
+
+#footer-logo{
+    width: 50%;
+}
+
+.footer-links{
+    padding: 5px;
+    text-decoration: none;
+    color: var(--primary);
+}
+
+.footer-links a:visited{
+    text-decoration: none;
+    color: var(--primary);
+}
+
+.footer-links:hover{
+    cursor: pointer;
+    transition: 100ms ease;
+    transform: translateY(-5px);
+    transition: transform .3s;
+    text-decoration: underline;
+}
+
+.social-btn:hover{
+    cursor: pointer;
+    transition: 100ms ease;
+    transform: translateY(-5px);
+    transition: transform .3s;
+}
+
+.clear {
+    display: flex;
+    justify-content: center;
+    padding: 1.5%;
+}
+
+.mc-field-group.text-center {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    flex-wrap: wrap;
+}
+
+#mc-embedded-subscribe{
+    padding: 7px;
+    background-image: linear-gradient(to right, var(--secondary) 0%, var(--primary) 100%);
+    background-size: 200% auto;
+    color: white;
+    font-family: 'Futura', sans-serif;
+    font-size: 1.2rem;
+    box-shadow: none;
+    border: none;
+    border-radius: 8px;
+    transition: 0.5s;
+}
+
+#mc-embedded-subscribe:hover{
+    cursor: pointer;
+    transition: 0.5s ease;
+    transform: translateY(-5px);
+    transition: transform .3s;
+    box-shadow: 0 7px 5px -6px rgb(0 0 0 / 40%), 0 6px 6px 0 rgb(0 0 0 / 28%), 0 5px 9px 0 rgb(0 0 0 / 24%);
+    background-position: right center;
+    font-weight: bold;
+
+}
+
+@media only screen and (min-width: 600px) {
+    .footer-content{
+        flex-direction: row;
+    }
+
+}

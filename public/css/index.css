@@ -1,0 +1,371 @@
+.hero {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    padding: 3%;
+    background-image: url('/img/Backgrounds/Illustrations-05.jpg');
+    background-size: cover;
+}
+
+.hero-info{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    justify-content: flex-start;
+}
+
+/*
+.hero h1{
+    background: linear-gradient(to bottom, var(--secondary), var(--primary));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+} 
+
+*/
+
+.hero p{
+    font-size: 1.5rem;
+    font-family: 'Futura', sans-serif;
+    color: var(--textNormal);
+}
+
+.hero-info-callToAction{
+    width: 100%;
+    display: flex;
+}
+
+
+.hero-picture{
+    display: none;
+}
+
+#heroCallToAction{
+    width: 100%;
+}
+
+Button{
+    background-image: linear-gradient(to right, var(--primary) 0%, var(--secondary) 100%);
+    background-size: 200% auto;
+    width: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    color: white;
+    font-family: 'Futura', sans-serif;
+    font-size: 1.2rem;
+    box-shadow: none;
+    border: none;
+    border-radius: 8px;
+    padding: 4%;
+    transition: 0.5s;
+}
+
+Button:hover{
+    cursor: pointer;
+    transition: 0.5s ease;
+    transform: translateY(-5px);
+    transition: transform .3s;
+    box-shadow: 0 7px 5px -6px rgb(0 0 0 / 40%), 0 6px 6px 0 rgb(0 0 0 / 28%), 0 5px 9px 0 rgb(0 0 0 / 24%);
+    background-position: right center;
+    font-weight: bold;
+}
+
+
+.home-section{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding-bottom: 2%;
+}
+
+
+.section-info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+        .section-info p{
+            padding-right: 10%;
+            padding-left: 10%;
+            margin-top: -1%;
+            padding-bottom: 2%;
+            color: black;
+        }
+
+.cards-container{
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    width: 100%;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 8px;
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+    padding: 1%;
+    border-radius: 8px;
+    height: 80%;
+}
+
+.card:hover{
+    transform: translateY(-5px);
+    transition: transform .3s;
+    box-shadow: 0 7px 5px -6px rgb(0 0 0 / 40%), 0 6px 6px 0 rgb(0 0 0 / 28%), 0 5px 9px 0 rgb(0 0 0 / 24%);
+
+}
+
+.card img{
+    width: 30%;
+    margin-top: 2%;
+}
+
+.card h3{
+    margin-top: 3%;
+}
+
+.card p {
+    padding-left: 2%;
+    padding-right: 2%;
+    margin-top: -5%;
+}
+
+.side-card{
+    background-color: var(--secondary);
+}
+
+.center-card{
+    background-color: var(--primary);
+    height: 85%;
+}
+
+.center-card h3{
+    color: white;
+}
+
+.center-card p{
+    color: white;
+}
+
+#home-what-we-do{
+    background-color: var(--primary);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 2%;
+}
+
+#home-what-we-do h2, p{
+    color: white;
+}
+
+#home-what-we-do h4{
+    color: var(--secondary);
+    margin: 1%;
+}
+
+.do-list{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 100%;
+    justify-content: normal;
+    align-items: center;
+}
+
+.top-row{
+    display: flex;
+    /* height: 50%; */
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    flex-direction: column;
+}
+
+.bottom-row{
+    display: flex;
+    /* height: 50%; */
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    flex-direction: column;
+}
+
+.do-item{
+    display: flex;
+    height: 40%;
+    align-items: center;
+}
+
+.do-item img{
+    width: 25%;
+}
+
+.do-item-text{
+    padding-left: 2.5%;
+    padding-right: 2.5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.do-item-text p{
+    color: var(--textAlternative);
+}
+
+
+.home-banner{
+    width: 100%;
+    height: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#join-us{
+    background-color: var(--secondary);
+    height: 35%;
+}
+
+
+#connection-section{
+    background-color: var(--BAFWhite);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.connection-internal{
+    width: 100%;
+    padding: 3%;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+}
+
+#connection-left h1{
+    font-size: clamp(5rem, 6rem);
+    background: -webkit-linear-gradient(45deg, var(--primary), var(--secondary));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom:-4%;
+}
+
+#connection-left i{
+    background: -webkit-linear-gradient(90deg, var(--primary), var(--secondary));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;  
+}
+
+#connection-left h2{
+    display: flex;
+    justify-content: center;
+}
+
+#connection-right h4{
+    margin-bottom: -4%;
+}
+
+#stats{
+    background-color: var(--primary);
+    height: 50%;
+}
+
+
+/* DESKTOP STARTS HERE*/
+@media only screen and (min-width: 600px){
+
+    .hero{
+        flex-direction: row;
+    }
+
+    .hero-picture{
+        display: flex;
+        width: 100%;
+    }
+
+    #heroCallToAction{
+        font-size: 1.5rem;
+        display: flex;
+        align-items: center;
+        width: 30%;
+    }
+
+    .home-section{
+        height: 100%;
+    }
+
+    #home-who-we-are{
+        height: unset;
+    }
+
+    .section-info{
+        height: 32%;
+    }
+
+    .card{
+        width: 25%;
+        height: 85%;
+        padding: 2%;
+    }
+
+    .center-card{
+        height: 90%;
+    }
+
+    .cards-container{
+        flex-direction: row;
+        gap: 10px;
+        height: 68%;
+    }
+
+    .top-row{
+        height: 50%;
+        flex-direction: row;
+        width: 85%;
+        align-items: center;
+    }
+
+    .bottom-row{
+        height: 50%;
+        flex-direction: row;
+        width: 85%;
+        align-items: center;
+    }
+
+    .do-items{
+        align-items: center;
+        width: 40%;
+    }
+
+    #join-us{flex-direction: row; justify-content: space-evenly;}
+
+    button {width: 70%;}
+
+    #join-button{
+        width: 25%;
+        height: 2%;
+        padding: 3%;
+    }
+    
+    #connection-section{
+        flex-wrap: nowrap;
+    }
+
+}
