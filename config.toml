@@ -1,4 +1,4 @@
-baseURL = "https://bafnetwork.github.io/BAF-Website/"
+baseURL = ""
 languageCode = "en-us"
 title = "Blockchain Acceleration Foundation"
 description = "The Blockchain Acceleration Foundation is a non-for-profit organization dedicated to connecting blockchain enthusiasts and developers to resources and organizations."
