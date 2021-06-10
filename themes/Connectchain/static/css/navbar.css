@@ -5,8 +5,8 @@ nav {
   height: 15vw;
   display: flex;
   flex-direction: column;
-  padding: 1rem;
   background-color: var(--fg);
+  padding-top: 1rem;
 }
 
 /* Navbar-Top Stylings */
@@ -17,15 +17,15 @@ nav {
 
 .logoContainer{
   display: flex;
-  width: 100%;
+  width: 70%;
 }
 
 #nav-logo-link{
-  width: 75%;
+  width: 90%;
 }
 
 #nav-logo{
-  width: 80%;
+  width: 90%;
 }
 
 .themeContainer{
@@ -46,7 +46,6 @@ nav {
   height: calc(100% - 15.5vh);
   flex-direction: row;
   background-color: var(--bg);
-  padding: 0.5rem;
   padding-bottom: 1rem;
   position: absolute;
   justify-content: center;
@@ -101,7 +100,7 @@ text-decoration: underline;
 .dropdown-content a {
   float: none;
   color: black;
-  padding: 12px 16px;
+  /*padding: 12px 16px;*/
   text-decoration: none;
   display: flex;
   text-align: left;
@@ -137,7 +136,6 @@ text-decoration: underline;
     justify-content: center;
     align-items: center;
     background-color: var(--bg);
-    padding: 1rem;
 }
 
 .navbar-top{

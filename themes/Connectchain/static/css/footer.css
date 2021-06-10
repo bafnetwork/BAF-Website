@@ -23,6 +23,9 @@
     align-items: center;
 }
 
+#footer-left{
+    text-align: center;
+}
 
 .subfooter{
     height: 5%;
@@ -60,10 +63,18 @@
     transition: transform .3s;
 }
 
+
+#mc_embed_signup_scroll {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .clear {
     display: flex;
     justify-content: center;
-    padding: 1.5%;
+    padding-top: 1.5%;
 }
 
 .mc-field-group.text-center {
@@ -86,6 +97,7 @@
     border: none;
     border-radius: 8px;
     transition: 0.5s;
+    width: auto;
 }
 
 #mc-embedded-subscribe:hover{
@@ -102,6 +114,10 @@
 @media only screen and (min-width: 600px) {
     .footer-content{
         flex-direction: row;
+    }
+
+    #footer-left{
+        text-align: initial;
     }
 
 }

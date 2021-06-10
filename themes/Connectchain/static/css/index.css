@@ -3,9 +3,6 @@
     width: 100%;
     height: 100%;
     flex-direction: column;
-    padding: 3%;
-    background-image: url('/img/Backgrounds/Illustrations-05.jpg');
-    background-size: cover;
 }
 
 .hero-info{
@@ -25,10 +22,16 @@
 
 */
 
+.hero h1{
+    padding-left: 2%;
+}
+
 .hero p{
     font-size: 1.5rem;
+    padding-right: 2%;
     font-family: 'Futura', sans-serif;
     color: var(--textNormal);
+    padding-left: 2%;
 }
 
 .hero-info-callToAction{
@@ -42,7 +45,8 @@
 }
 
 #heroCallToAction{
-    width: 100%;
+    padding-left: 2%;
+    width: 98%;
 }
 
 Button{
@@ -250,11 +254,12 @@ Button:hover{
 
 .connection-internal{
     width: 100%;
-    padding: 3%;
     display: flex;
     flex-direction: column;
     align-content: center;
     justify-content: center;
+    padding-top: 3%;
+    padding-bottom: 3%;
 }
 
 #connection-left h1{
@@ -264,6 +269,7 @@ Button:hover{
     background-clip: text;
     -webkit-text-fill-color: transparent;
     margin-bottom:-4%;
+    padding-left: 3%;
 }
 
 #connection-left i{
@@ -280,6 +286,7 @@ Button:hover{
 
 #connection-right h4{
     margin-bottom: -4%;
+    padding-right: 3%;
 }
 
 #stats{
