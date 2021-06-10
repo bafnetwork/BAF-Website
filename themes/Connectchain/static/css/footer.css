@@ -75,6 +75,7 @@
     display: flex;
     justify-content: center;
     padding-top: 1.5%;
+    width: 100%;
 }
 
 .mc-field-group.text-center {
@@ -97,7 +98,7 @@
     border: none;
     border-radius: 8px;
     transition: 0.5s;
-    width: auto;
+    width: 60%;
 }
 
 #mc-embedded-subscribe:hover{
