@@ -35,12 +35,13 @@
 
 #footer-logo{
     width: 50%;
+    content: var(--logo-img);
 }
 
 .footer-links{
     padding: 5px;
     text-decoration: none;
-    color: var(--primary);
+    color: var(--textNormal);
 }
 
 .footer-links a:visited{
@@ -56,7 +57,18 @@
     text-decoration: underline;
 }
 
-.social-btn:hover{
+.social{
+    display: flex;
+    width: 73%;
+    justify-content: space-evenly;
+}
+
+#social-btn{
+    color: var(--social);
+}
+
+
+#social-btn:hover{
     cursor: pointer;
     transition: 100ms ease;
     transform: translateY(-5px);
@@ -69,6 +81,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    color: var(--textNormal);
 }
 
 .clear {

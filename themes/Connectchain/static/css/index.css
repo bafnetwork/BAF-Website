@@ -3,6 +3,8 @@
     width: 100%;
     height: 100%;
     flex-direction: column;
+    background-color: var(--bg);
+    z-index: 1;
 }
 
 .hero-info{
@@ -83,6 +85,8 @@ Button:hover{
     flex-direction: column;
     width: 100%;
     padding-bottom: 2%;
+    z-index: 1;
+    background-color:var(--bg);
 }
 
 
@@ -98,7 +102,7 @@ Button:hover{
             padding-left: 10%;
             margin-top: -1%;
             padding-bottom: 2%;
-            color: black;
+            color: var(--textNormal);
         }
 
 .cards-container{
@@ -144,24 +148,24 @@ Button:hover{
 }
 
 .side-card{
-    background-color: var(--secondary);
+    background-color: var(--fgElementSecondary);
 }
 
 .center-card{
-    background-color: var(--primary);
+    background-color: var(--fgElementPrimary);
     height: 85%;
 }
 
 .center-card h3{
-    color: white;
+    color: var(--elementHeadingPrimary);
 }
 
 .center-card p{
-    color: white;
+    color: var(--elementTextPrimary);
 }
 
 #home-what-we-do{
-    background-color: var(--primary);
+    background-color: var(--sectionBG);
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -169,11 +173,11 @@ Button:hover{
 }
 
 #home-what-we-do h2, p{
-    color: white;
+    color: var(--sectionHeading);
 }
 
 #home-what-we-do h4{
-    color: var(--secondary);
+    color: var(--sectionHeading);
     margin: 1%;
 }
 
@@ -226,7 +230,7 @@ Button:hover{
 }
 
 .do-item-text p{
-    color: var(--textAlternative);
+    color: var(--sectionPrimaryText);
 }
 
 
@@ -240,16 +244,19 @@ Button:hover{
 }
 
 #join-us{
-    background-color: var(--secondary);
+    background-color: var(--fgElementSecondary);
     height: 35%;
 }
 
+#join-us h3{color: var(--primary);}
 
 #connection-section{
-    background-color: var(--BAFWhite);
+    background-color: unset;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    min-height: 80%;
+    z-index: 0;
 }
 
 .connection-internal{
@@ -290,7 +297,7 @@ Button:hover{
 }
 
 #stats{
-    background-color: var(--primary);
+    background-color: var(--fgElementSecondary);
     height: 50%;
 }
 
