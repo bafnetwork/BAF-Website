@@ -1,0 +1,228 @@
+{{partial "head.html" . }}
+
+{{partial "navbar.html" . }}
+
+<main>
+
+    <body class = "light">
+
+        <div class = "inner-body" style = "padding-left: 2%;">
+            <h1>Donate to BAF</h1>
+            <p>The Blockchain Acceleration Foundation is committed to accelerating blockchain adoption
+                and making the world a better place by creating educational material and connecting our members
+                to the organizations where they can make a difference.
+            </p>
+    
+            <div class = "donate-container">
+                <h2 style = "text-align: center;">Donate crypto to accelerate crypto!</h2>
+
+                <div class = "cards-container" id = "donation-container">
+                    <div class = "card side-card donation-card" id = "donate-btc">
+                        <img src = "/img/btc.svg" id = "btc-icon">
+                        <h3>BTC</h3>
+                        <img class = "qr-code" src = "/img/Uphold_BTC.png">
+                        <p class = "donation-code">1FpLdNFuG6dXprP2q28AQNZ5tgE36dDT6a</p>
+                    </div>
+
+                    <div class = "card center-card donation-card" id = "donate-eth">
+                        <img src = "/img/ethereum.svg" id = "eth-icon">
+                        <h3>ETH</h3>
+                        <img class = "qr-code" src = "/img/Uphold_ETH.png">
+                        <p class = "donation-code">0xFa0bE852b3d0C16474dC9902A4028a01B2B5C0E5</p>
+                    </div>
+                    <div class = "card side-card donation-card" id = "donate-dai">
+                        <img src = "/img/dai.svg" id = "dai-icon">
+                        <h3>DAI</h3>
+                        <img class = "qr-code" src = "/img/Uphold_DAI.png">
+                        <p class = "donation-code">0x3932198893f63E1c2BcE49FF42DBFCFb0fa31490</p>
+                    </div>
+                </div>
+
+                <div class = "card center-card donation-card" id = "donate-paypal">
+                    <i class = "fa fa-paypal fa-4x" id = "donate-paypal"></i>
+                    <h4 style = "color: var(--secondary); margin-bottom: 2%; margin-top: 1%;">PayPal</h4>
+                    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                        <input type="hidden" name="cmd" value="_donations">
+                        <input type="hidden" name="business" value="RQQ9D2WNPMQFL">
+                        <input type="hidden" name="item_name" value="Accelerate Blockchain">
+                        <input type="hidden" name="currency_code" value="USD">
+                        <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" target = "_blank">
+                        <img alt="" border="0" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1">
+                        </form>
+                </div>
+                
+            </div>
+
+            <div class = "donors">
+                <h2>Our Sponsors</h2>
+                <div class = "donor-container">
+
+                    <div class = "donor-card">
+                        <img src = "/img/donors/algorand2.png">
+                        <h3>Algorand Foundation</h3>
+                    </div>
+
+                    <div class = "donor-card">
+                        <img src = "/img/donors/protocol-labs.png">
+                        <h3>Protocol Labs</h3>
+                    </div>
+
+                    <div class = "donor-card">
+                        <img src = "/img/donors/casilias.png">
+                        <h3>Aaron Casilias</h3>
+                    </div>
+
+                    <div class = "donor-card">
+                        <img src = "/img/donors/gary.png">
+                        <h3>Gary Vartarian</h3>
+                    </div>
+
+                </div> 
+            </div>
+
+        </div>
+
+    </body>
+
+</main>
+
+{{partial "footer.html" . }}
+
+<style>
+    .inner-body{
+        display: flex;
+        flex-direction: column;
+        padding-left: 2%;
+        padding-right: 2%;
+        padding-bottom: 4%;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .inner-body p{
+        padding-left: 2%;
+        padding-right: 2%;
+        font-size: 2rem;
+        text-align: center;
+        width: 100%;
+        margin-top: 1.2%;
+    }
+
+    .donate-container{
+        width: 100%;
+        box-shadow: var(--bafShadow);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: var(--fgDark);
+        padding-bottom: 5%;
+    }
+
+    img.qr-code{
+        width: 85%;
+        margin-top: -2%;
+        padding-bottom: 2%;
+    }
+
+    p.donation-code{
+        overflow-wrap: break-word;
+        font-size: 1.2rem;
+        margin-top: 4%;
+    }
+
+    #donation-container{
+        width: 95%;
+    }
+
+    #donate-paypal{
+        margin-top: 2%;
+        color: var(--secondary);
+        padding-bottom: 2%;
+        width: 55%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #btc-icon{
+        content: var(--btc-donation);
+    }
+
+    #eth-icon{
+        content: var(--eth-donation);
+    }
+
+    #dai-icon{
+        content: var(--dai-donation);
+    }
+
+
+    .donors{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+        padding-bottom: 5%;
+    }
+
+    .donor-container{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 2%;
+    }
+
+    .donor-card{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        box-shadow: var(--bafShadow);
+        border-radius: 8px;
+        padding-top: 2%;
+        padding-bottom: 2%;
+        padding-left: 0%;
+        padding-right: 0%;
+        width: 75%;
+        text-align: center;
+    }
+
+    .donor-card:not(first-child){
+        margin-top: 5%;
+    }
+
+    .donor-card:hover{
+        box-shadow: var(--bafShadowHover);
+        transform: translateY(-5px);
+        transition: transform .3s;
+    }
+
+    .donor-card img{
+        width: 50%;
+        padding-bottom: 2%;
+    }
+
+    .donor-card h3{
+        margin: 0%;
+    }
+
+    @media only screen and (min-width: 600px){
+        .donor-container{
+            flex-direction: row;
+        }
+
+        .donor-card{
+            width: 35%;
+        }
+
+        .donation-card{width: 29%;}
+
+        .donor-card:not(first-child){
+            margin-top: 3%;
+        }
+    }
+
+</style>

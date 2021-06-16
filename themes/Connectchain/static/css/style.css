@@ -7,18 +7,29 @@
 :root {
 
 --bafWhite: #ffff;
+--bafDarkWhite: #f7f7f7;
 --bafBlack: #0C171D;
 --bafGrey: #18262F;
+--bafDarkGrey: #2b3a46;
 --bafBlue: #003262;
 --bafLightBlue: #87D3DD;
 
 --bafHoverLight: #ddd;
 --bafHoverDark: rgb(96, 100, 107);
 
+--bafShadow: 0 3px 1px -2px rgb(0 0 0 / 20%), 0 2px 2px 0 rgb(0 0 0 / 14%), 0 1px 5px 0 rgb(0 0 0 / 12%);
+--bafShadowHover: 0 7px 5px -6px rgb(0 0 0 / 40%), 0 6px 6px 0 rgb(0 0 0 / 28%), 0 5px 9px 0 rgb(0 0 0 / 24%);
+
 
 /*Images*/
 --logo-img-light: url('/img/BAF-Branding/logonavbar.png');
 --logo-img-dark: url('/img/BAF-Branding/logonavbar-dark.png');
+--donation-btc: url('/img/btc.svg');
+--donation-eth: url('/img/ethereum.svg');
+--donation-dai: url('/img/dai.svg');
+--donation-btc-light: url('/img/btc-light.svg');
+--donation-eth-light: url('/img/ethereum-light.svg');
+--donation-dai-light: url('/img/dai-light.svg');
 
 }
 
@@ -26,6 +37,7 @@
     /*Color Profile for Light Mode*/
     --bg: var(--bafWhite);
     --fg: var(--bafWhite);
+    --fgDark: var(--bafDarkWhite);
     --primary: var(--bafBlue);
     --secondary: var(--bafLightBlue);
     --textNormal: var(--bafBlack);
@@ -54,12 +66,16 @@
 
     /*Images*/
     --logo-img: var(--logo-img-light);
+    --btc-donation: var(--donation-btc);
+    --eth-donation: var(--donation-eth-light);
+    --dai-donation: var(--donation-dai);
 }
 
 .dark-theme {
     /*Color Profile for Dark Mode*/
     --bg: var(--bafBlack);
     --fg: var(--bafGrey);
+    --fgDark: var(--bafDarkGrey);
     --primary: var(--bafLightBlue);
     --secondary: var(--bafBlue);
     --textNormal: var(--bafWhite);
@@ -87,6 +103,9 @@
     --social: var(--bafWhite);
     /*Images*/
     --logo-img: var(--logo-img-dark);
+    --btc-donation: var(--donation-btc-light);
+    --eth-donation: var(--donation-eth);
+    --dai-donation: var(--donation-dai-light);
 }
 
 /* Fonts & Text */
