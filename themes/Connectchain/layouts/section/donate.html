@@ -60,21 +60,25 @@
                     <div class = "donor-card">
                         <img src = "/img/donors/algorand2.png">
                         <h3>Algorand Foundation</h3>
+                        <h4>$25,000</h4>
                     </div>
 
                     <div class = "donor-card">
                         <img src = "/img/donors/protocol-labs.png">
                         <h3>Protocol Labs</h3>
+                        <h4>$15,000</h4>
                     </div>
 
                     <div class = "donor-card">
                         <img src = "/img/donors/casilias.png">
                         <h3>Aaron Casilias</h3>
+                        <h4>$5,000</h4>
                     </div>
 
                     <div class = "donor-card">
                         <img src = "/img/donors/gary.png">
                         <h3>Gary Vartarian</h3>
+                        <h4>$800</h4>
                     </div>
 
                 </div> 
@@ -118,6 +122,10 @@
         padding-bottom: 5%;
     }
 
+    .donation-card:not(first-child) {
+    margin-top: 4%;
+}
+
     img.qr-code{
         width: 85%;
         margin-top: -2%;
@@ -138,7 +146,7 @@
         margin-top: 2%;
         color: var(--secondary);
         padding-bottom: 2%;
-        width: 55%;
+        width: 75%;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -190,6 +198,8 @@
         text-align: center;
     }
 
+    .donor-card h4{margin: 1%;}
+
     .donor-card:not(first-child){
         margin-top: 5%;
     }
@@ -216,6 +226,10 @@
 
         .donor-card{
             width: 35%;
+        }
+
+        #donate-paypal{
+            width: 50%;
         }
 
         .donation-card{width: 29%;}

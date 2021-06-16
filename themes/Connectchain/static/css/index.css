@@ -112,7 +112,6 @@ Button:hover{
     width: 100%;
     justify-content: space-evenly;
     align-items: center;
-    gap: 8px;
 }
 
 .card{
@@ -123,6 +122,10 @@ Button:hover{
     padding: 1%;
     border-radius: 8px;
     height: 80%;
+}
+
+.card:not(first-child) {
+    margin-top: 4%;
 }
 
 .card:hover{
@@ -293,6 +296,8 @@ Button:hover{
 
 #connection-right h4{
     padding-right: 3%;
+    padding-left: 3%;
+    text-align: center;
 }
 
 #stats{
