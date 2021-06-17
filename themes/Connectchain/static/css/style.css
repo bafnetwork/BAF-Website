@@ -30,6 +30,11 @@
 --donation-btc-light: url('/img/btc-light.svg');
 --donation-eth-light: url('/img/ethereum-light.svg');
 --donation-dai-light: url('/img/dai-light.svg');
+--sponsors-algorand-lightmode: url('/img/donors/algorand2.png');
+--sponsors-algorand-darkmode: url('/img/donors/algorand-white.png');
+--sponsors-protocol-lightmode: url('/img/donors/protocol-labs.png');
+--sponsors-protocol-darkmode: url('/img/donors/protocol-labs-white.png');
+
 
 }
 
@@ -69,6 +74,8 @@
     --btc-donation: var(--donation-btc);
     --eth-donation: var(--donation-eth-light);
     --dai-donation: var(--donation-dai);
+    --sponsors-protocol-labs: var(--sponsors-protocol-lightmode);
+    --sponsors-algorand: var(--sponsors-algorand-lightmode);
 }
 
 .dark-theme {
@@ -106,6 +113,8 @@
     --btc-donation: var(--donation-btc-light);
     --eth-donation: var(--donation-eth);
     --dai-donation: var(--donation-dai-light);
+    --sponsors-protocol-labs: var(--sponsors-protocol-darkmode);
+    --sponsors-algorand: var(--sponsors-algorand-darkmode);
 }
 
 /* Fonts & Text */

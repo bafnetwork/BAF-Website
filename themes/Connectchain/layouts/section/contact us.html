@@ -1,0 +1,31 @@
+{{partial "head.html" . }}
+
+{{partial "navbar.html" . }}
+
+<main>
+
+    <body class = "light">
+
+        <div class = "inner-body" style = "display: flex; flex-direction: column; align-items: center; justify-content: center; padding-left: 2%; width: 100%; height: 100%;">
+            <h1>Want to get in touch?</h1> 
+            <h2>Email us at: info@baf.network</h2>
+        </div>
+
+    </body>
+
+        <!-- particles.js container -->
+        <div id="particles-js"></div>
+        <!-- particles.js lib - https://github.com/VincentGarreau/particles.js -->
+        <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"> </script>
+        <script>particlesJS("particles-js", {"particles":{"number":{"value":115,"density":{"enable":true,"value_area":800}},"color":{"value":"#003262"},"shape":{"type":"triangle","stroke":{"width":0,"color":"#000000"},"polygon":{"nb_sides":5},"image":{"src":"img/github.svg","width":100,"height":100}},"opacity":{"value":0.78831137628638925,"random":true,"anim":{"enable":true,"speed":0.3,"opacity_min":0.1,"sync":false}},"size":{"value":12.00864934128859,"random":true,"anim":{"enable":false,"speed":40,"size_min":0.1,"sync":false}},"line_linked":{"enable":true,"distance":150,"color":"#87D3DD","opacity":0.4,"width":1},"move":{"enable":true,"speed":0.3,"direction":"none","random":false,"straight":false,"out_mode":"out","bounce":false,"attract":{"enable":false,"rotateX":600,"rotateY":1200}}},"interactivity":{"detect_on":"canvas","events":{"onhover":{"enable":true,"mode":"grab"},"onclick":{"enable":true,"mode":"push"},"resize":true},"modes":{"grab":{"distance":206.8445259204582,"line_linked":{"opacity":1}},"bubble":{"distance":400,"size":40,"duration":2,"opacity":8,"speed":3},"repulse":{"distance":200,"duration":0.4},"push":{"particles_nb":4},"remove":{"particles_nb":2}}},"retina_detect":true});var count_particles, stats, update; stats = new Stats; stats.setMode(0); stats.domElement.style.position = 'absolute'; stats.domElement.style.left = '0px'; stats.domElement.style.top = '0px'; document.body.appendChild(stats.domElement); count_particles = document.querySelector('.js-count-particles'); update = function() { stats.begin(); stats.end(); $(window).trigger('resize'); if (window.pJSDom[0].pJS.particles && window.pJSDom[0].pJS.particles.array) { count_particles.innerText = window.pJSDom[0].pJS.particles.array.length; } requestAnimationFrame(update); }; requestAnimationFrame(update);;</script>
+        <script>$(window).trigger('resize');</script>
+        <style>#particles-js {width: 100%;height: 100%;position: fixed;z-index: -1;top: 0;left: 0; right: 0;}
+        #particle-js canvas{transform: scale(1); opacity: 1; z-index: -1;}</style>
+
+</main>
+
+{{partial "footer.html" . }}
+
+<style>
+
+</style>

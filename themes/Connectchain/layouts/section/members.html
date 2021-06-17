@@ -1,0 +1,82 @@
+{{partial "head.html" . }}
+
+{{partial "navbar.html" . }}
+
+<main>
+
+    <body class = "light">
+
+        <div class = "inner-body" style = "padding-left: 2%;">
+            <h1>Become a BAF Member</h1>
+            <p>Satoshi Nakamoto launched lots of decentralisation when Litecoin required many decentralised application, for Augur limited some public key behind lots of multi signature. Blockchain thought some robust smart contract in a algorithm!</p>
+    
+            <div class = "membership-container">
+                <h2 style = "text-align: center;">Our Members</h2>
+
+                <div class = "cards-container" id = "membertype-container">
+
+                    <div class = "card side-card member-card" id = "donate-btc">
+                    </div>
+
+                    <div class = "card center-card member-card" id = "donate-eth">
+                    </div>
+
+                    <div class = "card side-card member-card" id = "donate-dai">
+                    </div>
+
+                </div>                
+            </div>
+
+            <h2>Ready to join?</h2>
+            <a href = "https://thebafnetwork.typeform.com/to/jes7CS" target = "_blank" style = "width:50%; height: 70px; text-decoration: none; padding-bottom: 2%;"><button style = "width: 100%; height: 100%;">Become a BAF Member</button></a>
+            <p style = "font-size: 1rem; padding-bottom: 4%;">It takes just five minutes to get connected to the greatest network of Blockchain professionals in the world!</p>
+
+            <style> @media only screen and (min-width: 600px){.inner-body a {width: 25% !important;}}</style>
+
+        </div>
+
+    </body>
+
+</main>
+
+{{partial "footer.html" . }}
+
+<style>
+    .inner-body{
+        display: flex;
+        flex-direction: column;
+        padding-left: 2%;
+        padding-right: 2%;
+        padding-bottom: 4%;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .inner-body p{
+        padding-left: 2%;
+        padding-right: 2%;
+        font-size: 2rem;
+        text-align: center;
+        width: 100%;
+        margin-top: 1.2%;
+    }
+
+    .membership-container{
+        width: 100%;
+        box-shadow: var(--bafShadow);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: var(--fgDark);
+        padding-bottom: 5%;
+    }
+
+    .member-card:not(first-child) {
+    margin-top: 4%;
+}
+
+    #membertype-container{
+        width: 95%;
+    }
+
+</style>
