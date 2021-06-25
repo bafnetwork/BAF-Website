@@ -1,0 +1,194 @@
+{{partial "head.html" . }}
+
+{{partial "navbar.html" . }}
+
+<main>
+
+    <body class = "light">
+            
+            <div class = "about-body" id = "OurFoundation" style = "background-image: url('/img/Backgrounds/bg-about.png');">
+                <h1>Our Foundation</h1>
+                <p id = "about-info">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magnam, autem. Laborum cupiditate sit fugit maiores tenetur eaque. Eligendi natus omnis iusto, deserunt dolorum ipsa soluta illum! Sed esse quia distinctio.</p>
+            </div>
+
+            <div class = "about-body" id = "OurStory">
+                <h1>Our Story</h1>
+                <p id = "about-info">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magnam, autem. Laborum cupiditate sit fugit maiores tenetur eaque. Eligendi natus omnis iusto, deserunt dolorum ipsa soluta illum! Sed esse quia distinctio.</p>
+
+            </div>
+
+            <div class = "about-body" id = "OurValues">
+                <h1>Our Values</h1>
+                <div class = "cards-container" id = "value-cards-container">
+
+                    <div class = "value-card">
+                        <h3>Value Name</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam dignissimos labore vitae laboriosam blanditiis! Quaerat nulla accusantium, mollitia ipsum doloribus corrupti, voluptatibus sit.</p>
+                    </div>
+
+                    <div class = "value-card">
+                        <h3>Value Name</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam dignissimos labore vitae laboriosam blanditiis! Quaerat nulla accusantium, mollitia ipsum doloribus corrupti, voluptatibus sit.</p>
+                    </div>
+
+                    <div class = "value-card">
+                        <h3>Value Name</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam dignissimos labore vitae laboriosam blanditiis! Quaerat nulla accusantium, mollitia ipsum doloribus corrupti, voluptatibus sit.</p>
+                    </div>
+
+                    <div class = "value-card">
+                        <h3>Value Name</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam dignissimos labore vitae laboriosam blanditiis! Quaerat nulla accusantium, mollitia ipsum doloribus corrupti, voluptatibus sit.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class = "about-body" id = "OurTeam">
+                <h1>Our Team</h1>
+
+                <div class = "cards-container" id = "team-members-container">
+
+                    <div class = "team-card">
+                        <h3>Team Member</h3>
+                        <p>Words</p>
+                    </div>
+
+                </div>
+
+
+                <h2>Leadership</h2>
+                
+                <div class = "cards-container" id = "team-members-container">
+
+                    <div class = "team-card">
+                        <h3>Team Member</h3>
+                        <p>Words</p>
+                    </div>
+                    
+                </div>
+
+                <h2>Board Members</h2>
+
+                <div class = "cards-container" id = "team-members-container">
+
+                    <div class = "team-card">
+                        <h3>Team Member</h3>
+                        <p>Words</p>
+                    </div>
+                    
+                </div>
+
+                <h2>Advisors</h2>
+
+                <div class = "cards-container" id = "team-members-container">
+
+                    <div class = "team-card">
+                        <h3>Team Member</h3>
+                        <p>Words</p>
+                    </div>
+                    
+                </div>
+
+            </div>
+
+            <div class = "home-banner" id = "join-us">
+                <h3>Ready to join?</h3>
+                <i class="fa fa-long-arrow-right fa-4x" aria-hidden="true" id = "join-us-arrow" style = "color: white;"></i>
+                <button id = "join-button">Become a member</button>
+            </div>
+
+            <div class = "about-body" id = "FAQ">
+                <h1>Frequently Asked Questions</h1>
+            </div>
+
+    </body>
+
+</main>
+
+{{partial "footer.html" . }}
+
+<style>
+    .about-body{
+        min-height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        padding: 2%;
+    }
+
+    #about-info{
+        padding-right: 25%;
+    }
+
+#value-cards-container{
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.value-card{
+    width: 85%;
+    background-color: var(--fgDark);
+    display: flex;
+    flex-direction: column;
+    border-radius: 8px;
+    padding: 2%;
+    margin-left: 5px;
+    margin-right: 5px;
+    box-shadow: var(--bafShadow);
+}
+
+.value-card p{
+    display: none;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.value-card:hover p{
+    display: flex;
+    opacity: 1;
+    visibility: visible;
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+    transition-delay: 0.3s;
+}
+
+.value-card:hover{
+    box-shadow: var(--bafShadowHover);
+    transform: translateY(-5px);
+    transition: transform .3s;
+}
+
+
+.team-card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 8px;
+    background-color: var(--fgDark);
+    padding: 2%;
+    box-shadow: var(--bafShadow);
+}
+
+.team-card:hover{
+    box-shadow: var(--bafShadowHover);
+    transform: translateY(-5px);
+    transition: transform .3s;
+    background-image: linear-gradient(to right, var(--primary) 0%, var(--secondary) 100%);
+    background-size: 200% auto;
+    background-position: right center;
+}
+
+.team-card p{text-align: center;}
+
+#team-members-container{
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+
+@media only screen and (min-width: 600px){
+    .value-card{width: 35%; }
+}
+
+</style>
