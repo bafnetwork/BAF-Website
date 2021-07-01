@@ -1,0 +1,220 @@
+{{partial "head.html" . }}
+
+{{partial "navbar.html" . }}
+
+<main>
+
+    <body class = "light">
+
+        <div class = "programs-body" id = "ProgramsIntro">
+            <h1>Programs</h1>
+            <p id = "programs-info">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, iste laudantium tempora numquam, ex recusandae cumque iusto saepe vitae molestias ullam error fuga ipsam suscipit, sapiente unde porro ratione! Sed.</p>
+            <div class = "cards-container" id = "programs-cards-container">
+
+                <div class = "program-card" id = "EducateCard">
+                    <h3>Education</h3>
+                    <h4 class = "ProgramCardText"><i class="fa fa-arrow-circle-o-down" aria-hidden="true"></i> Learn More</h4>
+                </div>
+
+                <div class = "program-card" id = "RecruitCard">
+                    <h3>Recruitment</h3>
+                    <h4 class = "ProgramCardText"><i class="fa fa-arrow-circle-o-down" aria-hidden="true"></i> Learn More</h4>
+
+                </div>
+
+                <div class = "program-card" id = "ProjectsCard">
+                    <h3>Projects</h3>
+                    <h4 class = "ProgramCardText"><i class="fa fa-arrow-circle-o-down" aria-hidden="true"></i> Learn More</h4>
+
+                </div>
+
+            </div>
+        </div>
+
+        <div class = "programs-body" id = "EducationProgram">
+            <h1>Education Programs</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos consectetur harum explicabo. Repudiandae corrupti ad cum perferendis saepe! Voluptate consectetur voluptatem doloremque dolores perspiciatis dicta optio illum, officia tempore placeat?</p>
+            <div class = "cards-container" id = "education-cards-container">
+
+                <div class = "education-card" id = "web3t3" style = "background-color: var(--fgElementPrimary);">
+                    <h4>Web3T3</h4>
+                    <p>Words words words words words</p>
+                </div>
+
+                <div class = "education-card" id = "web3t3" style = "background-color: var(--fgElementSecondary);">
+                    <h4>Accredited Courses</h4>
+                    <p>Words words words words words</p>
+                </div>
+
+                <div class = "education-card" id = "web3t3" style = "background-color: var(--fgElementPrimary);">
+                    <h4>Meetups</h4>
+                    <p>Words words words words words</p>
+                </div>
+
+            </div>
+        </div>
+
+        <div class = "programs-body" id = "RecruitingProgram">
+            <h1>Recruiting</h1>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corrupti cumque eveniet aliquam officia illum fugiat magni velit, corporis, sequi unde, eaque nemo ratione aliquid dolores porro nobis animi temporibus quod.</p>
+            <div class = "owl-carousel owl-theme testimonials">
+                <div class = "testimonial-card"><h3>Testimonial 1</h3></div>
+                <div class = "testimonial-card"><h3>Testimonial 2</h3></div>
+                <div class = "testimonial-card"><h3>Testimonial 3</h3></div>
+                <div class = "testimonial-card"><h3>Testimonial 4</h3></div>
+                <div class = "testimonial-card"><h3>Testimonial 5</h3></div>
+                <div class = "testimonial-card"><h3>Testimonial 6</h3></div>
+                <div class = "testimonial-card"><h3>Testimonial 7</h3></div>
+            </div>
+
+            <script>$('.owl-carousel').owlCarousel({
+                loop:false,
+                margin:10,
+                nav:true,
+                items: 3,
+                responsive:{
+                    0:{
+                        items:1
+                    },
+                    600:{
+                        items:3
+                    },
+                    1000:{
+                        items:5
+                    }
+                }
+            })</script>
+        </div>
+
+        <div class = "home-banner" id = "join-us">
+            <h3>Ready to join?</h3>
+            <i class="fa fa-long-arrow-right fa-4x" aria-hidden="true" id = "join-us-arrow" style = "color: white;"></i>
+            <button id = "join-button">Become a member</button>
+        </div>
+
+        <div class = "programs-body" id = "ProjectsProgram">
+            <h1>Projects</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione, sunt esse necessitatibus similique perspiciatis accusantium rerum optio sed quisquam unde magni sint fuga facilis pariatur placeat voluptate sequi iusto voluptatum?</p>
+            <div class = "owl-carousel owl-theme">
+                <div class = "project-card"><h3>Project 1</h3></div>
+                <div class = "project-card"><h3>Project 2</h3></div>
+                <div class = "project-card"><h3>Project 3</h3></div>
+                <div class = "project-card"><h3>Project 4</h3></div>
+                <div class = "project-card"><h3>Project 5</h3></div>
+                <div class = "project-card"><h3>Project 6</h3></div>
+                <div class = "project-card"><h3>Project 7</h3></div>
+            </div>
+
+            <script>$('.owl-carousel').owlCarousel({
+                loop:false,
+                margin:10,
+                nav:true,
+                items: 3,
+                responsive:{
+                    0:{
+                        items:1
+                    },
+                    600:{
+                        items:3
+                    },
+                    1000:{
+                        items:5
+                    }
+                }
+            })</script>
+        </div>
+
+    </body>
+
+</main>
+
+{{partial "footer.html" . }}
+
+<style>
+    .programs-body{
+        min-height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        padding: 2%;
+    }
+
+    #ProgramsIntro{
+        background: linear-gradient(171deg, var(--bg) 40%, var(--fgElementPrimary) 41%);
+    }
+
+    #programs-info{padding-right: 27%;}
+
+    #programs-cards-container{margin-top: 12%; padding-right: 5%; align-items: flex-start;}
+
+    .program-card{
+        margin-top: 5%;
+        width: unset;
+        min-width: 50%;
+        background-color: var(--fg);
+        display: flex;
+        flex-direction: column;
+        border-radius: 8px;
+        padding: 2%;
+        margin-left: 5px;
+        margin-right: 5px;
+        box-shadow: var(--bafShadow);
+        text-align: center;
+    }
+
+    .program-card:hover{
+        box-shadow: var(--bafShadowHover);
+        transform: translateY(-5px);
+        transition: transform .3s;
+        background-image: linear-gradient(to right, var(--primary) 0%, var(--secondary) 100%);
+        background-size: 200% auto;
+        background-position: right center;
+        cursor: pointer;
+    }
+
+    .program-card:hover h3{
+        color: var(--bafWhite);
+    }
+
+    .program-card:hover .ProgramCardText{
+        display: unset;
+        opacity: 1;
+        visibility: visible;
+        transition:cubic-bezier(0.075, 0.82, 0.165, 1);
+        transition-delay: 75ms;
+        color: var(--bafWhite);
+    }
+
+    .ProgramCardText{padding: 0; margin: 0; font-weight: 300; display: none; visibility: hidden; opacity: 0;}
+
+    #education-cards-container{flex-direction: column;}
+
+    .education-card{
+        width: 80%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        border-radius: 8px;
+        padding: 2%;
+        margin-left: 5px;
+        margin-right: 5px;
+        box-shadow: var(--bafShadow);
+        align-items: center;
+    }
+
+    .education-card h4{color: white;}
+
+    .education-card p{color: white; padding-left: 2%;}
+
+    .project-card{background: var(--primary); display: flex;}
+    .project-card h3{color: white;}
+
+    .testimonial-card{background: var(--primary); display: flex;}
+    .testimonial-card h3{color: white;}
+
+    @media only screen and (min-width: 600px){
+    .program-card{width: unset; min-width: 17%;}
+    #programs-cards-container{margin-top: 4%;}
+    #ProgramsIntro{background: linear-gradient(171deg, var(--bg) 44%, var(--fgElementPrimary) 45%);}
+}
+</style>

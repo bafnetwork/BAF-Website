@@ -51,7 +51,7 @@
     width: 98%;
 }
 
-Button{
+Button:not(.owl-dot):not(.owl-prev):not(.owl-next) {
     background-image: linear-gradient(to right, var(--primary) 0%, var(--secondary) 100%);
     background-size: 200% auto;
     width: 40%;
@@ -69,7 +69,7 @@ Button{
     transition: 0.5s;
 }
 
-Button:hover{
+Button:hover:not(.owl-dot):not(.owl-prev):not(.owl-next) {
     cursor: pointer;
     transition: 0.5s ease;
     transform: translateY(-5px);
@@ -374,7 +374,7 @@ Button:hover{
 
     #join-us{flex-direction: row; justify-content: space-evenly;}
 
-    button {width: 70%;}
+    button:not(.owl-dot):not(.owl-prev):not(.owl-next) {width: 70%;}
 
     #join-button{
         width: 25%;
