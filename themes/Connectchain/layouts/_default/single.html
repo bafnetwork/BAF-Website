@@ -1,0 +1,89 @@
+{{partial "head.html" . }}
+
+{{partial "navbar.html" . }}
+
+<main>
+
+    <body class = "light">
+
+        <div class = "inner-body" style = "padding-left: 2%; padding-right: 2%;">
+            <h1 class = "post-title"> {{ .Title }} </h1>
+            <h5 class = "post-author">by {{.Param "author"}} </h5>
+            <p class = "post-date">{{ .Date }}</p>
+            <div class = "post-cat"> {{ if .Params.categories }}
+                {{range .Params.categories}}
+                <button class = "post-btn" id = "cat-btn" href="{{ "/categories/" | relLangURL }}{{ . | urlize }}">{{ . }}</button> 
+                {{end}}
+                {{end}} 
+            </div>
+
+            <div class = "post-tag"> {{ if .Params.tags }}
+                {{range .Params.tags}}
+                <button class = "post-btn" id = "tag-btn" href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">#{{ . }}</button> 
+                {{end}}
+                {{end}} 
+            </div>
+
+            <div class = "content">
+
+                <div class = "content-media">
+                        {{ with .Param "featured_image" }}
+                        <img src = "{{ . }}">
+                    {{ end }}
+
+                    {{ with .Param "video_id" }}
+                        <iframe src="https://www.youtube.com/embed/{{ . }}"
+                            style="width: 560; height: 315;"
+                            allowfullscreen frameborder="0"
+                            title="YouTube Video">
+                        </iframe>
+                    {{ end }}
+                </div>
+
+
+                {{ .Content }}
+            </div>
+        </div>
+
+    </body>
+
+</main>
+
+{{partial "footer.html" . }}
+
+<style>
+    .post-author{
+        margin: 0;
+        margin-top: -1.2rem;
+    }
+
+    .content{
+        padding-top: 2%;
+        padding-bottom: 3%;
+    }
+
+    .content-media{
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: 2%;
+    }
+
+    .post-btn{
+        min-width: 5%;
+        margin-bottom: 5px;
+        font-size: 1rem;
+        border-radius: 7px;
+        color: white;
+        border: none;
+    }
+
+    #cat-btn{
+        background-color: var(--primary);
+    }
+
+    #tag-btn{
+        background-color: var(--secondary);
+    }
+</style>

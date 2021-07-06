@@ -1,7 +1,7 @@
 .hero {
     display: flex;
     width: 100%;
-    height: 100%;
+    min-height: 100%;
     flex-direction: column;
     background-color: var(--bg);
     z-index: 1;
@@ -51,7 +51,7 @@
     width: 98%;
 }
 
-Button:not(.owl-dot):not(.owl-prev):not(.owl-next) {
+Button:not(.owl-dot):not(.owl-prev):not(.owl-next):not(.post-btn) {
     background-image: linear-gradient(to right, var(--primary) 0%, var(--secondary) 100%);
     background-size: 200% auto;
     width: 40%;
@@ -69,7 +69,7 @@ Button:not(.owl-dot):not(.owl-prev):not(.owl-next) {
     transition: 0.5s;
 }
 
-Button:hover:not(.owl-dot):not(.owl-prev):not(.owl-next) {
+Button:hover:not(.owl-dot):not(.owl-prev):not(.owl-next):not(.post-btn) {
     cursor: pointer;
     transition: 0.5s ease;
     transform: translateY(-5px);
@@ -239,7 +239,7 @@ Button:hover:not(.owl-dot):not(.owl-prev):not(.owl-next) {
 
 .home-banner{
     width: 100%;
-    height: 30%;
+    min-height: 30%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -306,6 +306,8 @@ Button:hover:not(.owl-dot):not(.owl-prev):not(.owl-next) {
 }
 
 
+
+
 /* DESKTOP STARTS HERE*/
 @media only screen and (min-width: 600px){
 
@@ -326,7 +328,7 @@ Button:hover:not(.owl-dot):not(.owl-prev):not(.owl-next) {
     }
 
     .home-section{
-        height: 100%;
+        min-height: 100%;
     }
 
     #home-who-we-are{
@@ -374,7 +376,7 @@ Button:hover:not(.owl-dot):not(.owl-prev):not(.owl-next) {
 
     #join-us{flex-direction: row; justify-content: space-evenly;}
 
-    button:not(.owl-dot):not(.owl-prev):not(.owl-next) {width: 70%;}
+    Button:not(.owl-dot):not(.owl-prev):not(.owl-next):not(.post-btn):not(.post-btn) {width: 70%;}
 
     #join-button{
         width: 25%;
