@@ -48,30 +48,31 @@
 
                     {{ range first 3 (where .Site.RegularPages "Type" "in" (slice "blog" "project")) }}
 
-                    <div class = "card hub-card">
-                        {{ with .Param "featured_image" }}
-                            <img src = "{{ . }}" style = "width: 100%;">
-                        {{ end }}
-
-                        <h3>{{ .Title }}</h3>
-
-                        <p> {{ .Summary }} </p>
-
-                        <div class = "post-cat"> {{ if .Params.categories }}
-                            {{range .Params.categories}}
-                            <button class = "post-btn" id = "cat-btn" href="{{ "/categories/" | relLangURL }}{{ . | urlize }}">{{ . }}</button> 
-                            {{end}}
-                            {{end}} 
+                    <a class = "blog-link" style = "display: flex; width: 100%; justify-content: center;" href = "{{ .RelPermalink }}">
+                        <div class = "card hub-card">
+                            {{ with .Param "featured_image" }}
+                                <img src = "{{ . }}" style = "width: 100%;">
+                            {{ end }}
+    
+                            <h3>{{ .Title }}</h3>
+    
+                            <div class = "post-cat" style = "display: flex; width: 100%; padding-left: 2%;"> {{ if .Params.categories }}
+                                {{range .Params.categories}}
+                                <button class = "post-btn" id = "cat-btn" href="{{ "/categories/" | relLangURL }}{{ . | urlize }}"><h5 style = "color: var(--elementTextPrimary); padding: 0; margin: 0; text-align: left; width: 100%;">A {{ . }}</h5></button> 
+                                {{end}}
+                                {{end}} 
+                            </div>
+                
+                            <div class = "post-tag" style = "display: flex; width: 100%; padding-left: 2%;"> {{ if .Params.tags }}
+                                {{range .Params.tags}}
+                                <button style = "margin: 2px;" class = "post-btn" id = "tag-btn" href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">#{{ . }}</button> 
+                                {{end}}
+                                {{end}} 
+                            </div>
+    
                         </div>
-            
-                        <div class = "post-tag"> {{ if .Params.tags }}
-                            {{range .Params.tags}}
-                            <button class = "post-btn" id = "tag-btn" href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">#{{ . }}</button> 
-                            {{end}}
-                            {{end}} 
-                        </div>
+                    </a>
 
-                    </div>
                     {{ end }}
                 </div>
             </div>
@@ -117,6 +118,11 @@
                 </div>
             </div>
 
+            <div class = "gitcoin-banner" style = "display: flex; flex-direction: column; width: 100%; text-align: right; align-items: center; justify-content: center;">
+               <a style = "width: 30%;" href = "gitcoin.co/thebafnetwork" target = "_blank"><img src = "/img/gitcoin-logo.svg" style = "content: var(--gitcoin-banner-logo); width: 100%;"></a>
+                <h2 style = "padding-right: 3%;">Want to tackle quests for $? Join us on Gitcoin!</h2>
+            </div>
+
     </body>
 
             <!-- particles.js container -->
@@ -133,24 +139,6 @@
 {{partial "footer.html" . }}
 
 <style>
-
-.post-btn{
-        min-width: 5%;
-        margin-bottom: 5px;
-        font-size: 1rem;
-        border-radius: 7px;
-        color: white;
-        border: none;
-    }
-
-    #cat-btn{
-        background-color: var(--primary);
-    }
-
-    #tag-btn{
-        background-color: var(--secondary);
-    }
-
     .hubInfoSection{
         min-height: 75%;
         display: flex;
@@ -233,6 +221,47 @@
         padding-left: 2%;
     }
 
+    .hub-card{
+        background-color: var(--fgDark);
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0;
+        padding-bottom: 4px;
+        box-shadow: var(--bafShadow);
+        width: 80%;
+    }
+
+    .hub-card:hover{
+        box-shadow: var(--bafShadowHover);
+        cursor: pointer;
+    }
+
+    .hub-card h3{
+        color: var(--primary);
+        padding-left: 2%;
+    }
+
+    .post-btn{
+        min-width: 5%;
+        margin-bottom: 5px;
+        font-size: 1rem;
+        border-radius: 7px;
+        color: white;
+        border: none;
+    }
+
+    #cat-btn{
+        background-color: var(--primary);
+    }
+
+    #tag-btn{
+        background-color: var(--secondary);
+    }
+
+    .hub-card img{margin-top: 0; border-top-left-radius: 8px; border-top-right-radius: 8px;}
+
+
     .videos{
         display: flex;
         flex-direction: column;
@@ -273,6 +302,15 @@
         height: 100%;
     }
 
+    .gitcoin-banner a{
+        width: 100% !important;
+    }
+
+    .gitcoin-banner a:hover{
+        transform: translateY(-5px);
+        transition: transform .3s;
+    }
+
 
     @media only screen and (min-width: 600px){
 
@@ -295,46 +333,56 @@
         text-align: right;
     }
 
-        .audio-blog{
-            display: flex;
-            justify-content: center;
-            min-height: 80%;
-            align-items: center;
+    .audio-blog{
+        display: flex;
+        justify-content: center;
+        min-height: 80%;
+        align-items: center;
 
-        }
+    }
 
-        .audio-text{
-            padding-left: 2%;
-            padding-right: 2% !important;
-            width: 34%;
-        }
+    .audio-text{
+        padding-left: 2%;
+        padding-right: 2% !important;
+        width: 34%;
+    }
 
-        .audio-blog-players{
-            display: flex;
-            flex-direction: row;
-            flex-wrap: wrap;
-            justify-content: center;
-        }
+    .audio-blog-players{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
 
-        #audio-blog-player{
-            margin: 5;
-        }
+    #audio-blog-player{
+        margin: 5;
+    }
 
-        .button-div{
-            justify-content: unset !important;
-            padding-left: 0.5%;
-        }
+    .button-div{
+        justify-content: unset !important;
+        padding-left: 0.5%;
+    }
 
-        .button-div button{
-            width: 100% !important;
-            height: 60 !important;
-            padding: 0 !important;
-        }
+    .button-div button{
+        width: 100% !important;
+        height: 60 !important;
+        padding: 0 !important;
+    }
 
-        .blogs-projects{
-            display: flex;
-            flex-wrap: nowrap;
-        }
+    .blogs-projects{
+        display: flex;
+        flex-wrap: nowrap;
+    }
+
+    .gitcoin-banner{
+        flex-direction: row !important;
+        align-items: unset !important;
+    }
+
+    .gitcoin-banner a{
+        width: 30% !important;
+    }
+
     }
 
 </style>

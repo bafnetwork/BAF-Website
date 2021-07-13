@@ -34,7 +34,8 @@
 --sponsors-algorand-darkmode: url('/img/donors/algorand-white.png');
 --sponsors-protocol-lightmode: url('/img/donors/protocol-labs.png');
 --sponsors-protocol-darkmode: url('/img/donors/protocol-labs-white.png');
-
+--gitcoin-logo: url('/img/gitcoin-logo.svg');
+--gitcoin-logo-darkmode: url('/img/gitcoin-logo-darkmode.svg');
 
 }
 
@@ -76,6 +77,7 @@
     --dai-donation: var(--donation-dai);
     --sponsors-protocol-labs: var(--sponsors-protocol-lightmode);
     --sponsors-algorand: var(--sponsors-algorand-lightmode);
+    --gitcoin-banner-logo: var(--gitcoin-logo);
 }
 
 .dark-theme {
@@ -115,6 +117,7 @@
     --dai-donation: var(--donation-dai-light);
     --sponsors-protocol-labs: var(--sponsors-protocol-darkmode);
     --sponsors-algorand: var(--sponsors-algorand-darkmode);
+    --gitcoin-banner-logo: var(--gitcoin-logo-darkmode);
 }
 
 /* Fonts & Text */
