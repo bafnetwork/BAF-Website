@@ -1,0 +1,340 @@
+{{partial "head.html" . }}
+
+{{partial "navbar.html" . }}
+
+<main>
+
+    <body class = "light">
+
+            <div class = "hubInfoSection">
+
+                <div class = "hubwrapper">
+                    <div class = "theHubInfo">
+                        <div class = "hubinfotext">
+                            <h2 style = "padding-left: 2%;">The Hub</h2>
+                            <p style = "padding-left: 2%;">Welcome! Here you can see the latest and greatest from BAF</p>    
+                        </div>
+                        <div class = "hubsocialinfo">
+                            <div class="social" id = "hubsocials" style = "justify-content: flex-start;">
+                                <a href="https://twitter.com/TheBAFNetwork" target="_blank"><i id="social-btn" class="fa fa-twitter fa-2x"></i></a>
+                                <a href="https://www.linkedin.com/company/thebafnetwork/" target="_blank"><i id="social-btn" class="fa fa-linkedin fa-2x"></i></a>
+                                <a href="https://www.facebook.com/TheBAFNetwork/" target="_blank"><i id="social-btn" class="fa fa-facebook-official fa-2x"></i></a>
+                                <a href="https://t.me/joinchat/F70K2BCPSN0huhYtb_8jLQ" target="_blank"><i id="social-btn" class="fa fa-telegram fa-2x"></i></a>
+                                <a href="https://medium.com/@BAF1" target="_blank"><i id="social-btn" class="fa fa-medium fa-2x"></i></a>
+                                <a href="https://www.youtube.com/channel/UClN34KJfDsCVRs8rJHXH_-A" target="_blank"><i id="social-btn" class="fa fa-youtube-play fa-2x"></i></a>
+                            </div>
+                            <h5 style = 'width: 100%; text-align: center; margin-top: -2%; padding-top: 3%;'> Follow Us on Social! </h5>
+        
+                        </div>
+                    </div>
+                </div>
+                <div class = "hubcategories">
+                    <a><h3>Blogs</h3></a>
+                    <a><h3>Projects</h3></a>
+                    <a><h3>Videos</h3></a>
+                    <a><h3>Audio Blogs</h3></a>
+                </div>
+            </div>
+
+            <hr style = "width: 50%; background-color: var(--primary); border-radius: 8px; height: 1.6;">
+
+            <div class = "blogs-projects">
+                <div class = "blog-projects-text">
+                    <h2>Latest from BAF</h2>
+                    <div class = "button-div" style = "display: flex; width: 100%; justify-content: center;"><button style = "width: 50%; margin-top: 0!important;">More blogs & projects</button></div>    
+                </div>
+                <div class = "cards-container">
+
+
+                    {{ range first 3 (where .Site.RegularPages "Type" "in" (slice "blog" "project")) }}
+
+                    <div class = "card hub-card">
+                        {{ with .Param "featured_image" }}
+                            <img src = "{{ . }}" style = "width: 100%;">
+                        {{ end }}
+
+                        <h3>{{ .Title }}</h3>
+
+                        <p> {{ .Summary }} </p>
+
+                        <div class = "post-cat"> {{ if .Params.categories }}
+                            {{range .Params.categories}}
+                            <button class = "post-btn" id = "cat-btn" href="{{ "/categories/" | relLangURL }}{{ . | urlize }}">{{ . }}</button> 
+                            {{end}}
+                            {{end}} 
+                        </div>
+            
+                        <div class = "post-tag"> {{ if .Params.tags }}
+                            {{range .Params.tags}}
+                            <button class = "post-btn" id = "tag-btn" href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">#{{ . }}</button> 
+                            {{end}}
+                            {{end}} 
+                        </div>
+
+                    </div>
+                    {{ end }}
+                </div>
+            </div>
+
+            <div class = "videos">
+                <div class = "video-info">
+                    <h2>Videos</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur officiis odit esse aspernatur cum alias. Cum vero, blanditiis eaque quos voluptatum cumque, minima amet rerum numquam debitis accusamus, consectetur ipsum.</p>
+                    <button>More Videos</button>
+                </div>
+
+                {{ range first 1 (where .Site.RegularPages "Type" "video") }}
+                {{ with .Param "video_id" }}
+                <div class = "video-container" style = "padding-top: 2%;">
+                    <div class = "video-embed">
+                        <iframe width="560" height = "315" src="https://www.youtube.com/embed/{{ . }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                </div>
+                {{end}}
+                {{end}}
+
+            </div>
+
+            <div class = "audio-blog">
+                <div class = "audio-text" style = "padding-right: 5%; padding-left: 2%;">
+                    <h2>Audio Blogs</h2>
+                    <p>BAF creates audio versions of the most influential crypto blogs and papers in the space -- listen to crypto's greatest works now</p>
+                    <button>More Audio Blogs</button>
+                </div>
+                <div class = "audio-blog-players">
+
+                    {{ $posts := (where .Site.RegularPages "Section" "in" "blogs" )  }}
+                    {{ $audioblogsare := (where (where .Pages "Section" "blogs" ) ".Params.categories" "intersect" "Audio Blogs" ) }}
+                    {{ $audioblogs := $posts | complement $audioblogsare | first 4 }}
+                    {{ range first 4 $audioblogs }}
+
+                    {{with .Param "audio_link"}}
+                    <iframe id = "audio-blog-player" src="{{ . }}?theme=0" width="315px" height="152" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+                    {{ end }}
+
+                    {{end}}
+
+                </div>
+            </div>
+
+    </body>
+
+            <!-- particles.js container -->
+            <div id="particles-js"></div>
+            <!-- particles.js lib - https://github.com/VincentGarreau/particles.js -->
+            <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"> </script>
+            <script>particlesJS("particles-js", {"particles":{"number":{"value":115,"density":{"enable":true,"value_area":800}},"color":{"value":"#003262"},"shape":{"type":"triangle","stroke":{"width":0,"color":"#000000"},"polygon":{"nb_sides":5},"image":{"src":"img/github.svg","width":100,"height":100}},"opacity":{"value":0.78831137628638925,"random":true,"anim":{"enable":true,"speed":0.3,"opacity_min":0.1,"sync":false}},"size":{"value":12.00864934128859,"random":true,"anim":{"enable":false,"speed":40,"size_min":0.1,"sync":false}},"line_linked":{"enable":true,"distance":150,"color":"#87D3DD","opacity":0.4,"width":1},"move":{"enable":true,"speed":0.3,"direction":"none","random":false,"straight":false,"out_mode":"out","bounce":false,"attract":{"enable":false,"rotateX":600,"rotateY":1200}}},"interactivity":{"detect_on":"canvas","events":{"onhover":{"enable":true,"mode":"grab"},"onclick":{"enable":true,"mode":"push"},"resize":true},"modes":{"grab":{"distance":206.8445259204582,"line_linked":{"opacity":1}},"bubble":{"distance":400,"size":40,"duration":2,"opacity":8,"speed":3},"repulse":{"distance":200,"duration":0.4},"push":{"particles_nb":4},"remove":{"particles_nb":2}}},"retina_detect":true});var count_particles, stats, update; stats = new Stats; stats.setMode(0); stats.domElement.style.position = 'absolute'; stats.domElement.style.left = '0px'; stats.domElement.style.top = '0px'; document.body.appendChild(stats.domElement); count_particles = document.querySelector('.js-count-particles'); update = function() { stats.begin(); stats.end(); $(window).trigger('resize'); if (window.pJSDom[0].pJS.particles && window.pJSDom[0].pJS.particles.array) { count_particles.innerText = window.pJSDom[0].pJS.particles.array.length; } requestAnimationFrame(update); }; requestAnimationFrame(update);;</script>
+            <script>$(window).trigger('resize');</script>
+            <style>#particles-js {width: 100%;height: 100%;position: fixed;z-index: -1;top: 0;left: 0; right: 0;}
+            #particle-js canvas{transform: scale(1); opacity: 1; z-index: -1;}</style>
+
+</main>
+
+{{partial "footer.html" . }}
+
+<style>
+
+.post-btn{
+        min-width: 5%;
+        margin-bottom: 5px;
+        font-size: 1rem;
+        border-radius: 7px;
+        color: white;
+        border: none;
+    }
+
+    #cat-btn{
+        background-color: var(--primary);
+    }
+
+    #tag-btn{
+        background-color: var(--secondary);
+    }
+
+    .hubInfoSection{
+        min-height: 75%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+        align-items: center;
+        padding-top: 2%;
+    }
+
+    #hubsocials{width: 100%; justify-content: center !important;}
+
+    #hubsocials a{
+        margin: 5;
+    }
+
+    .hubwrapper{
+        width: fit-content;
+        background-color: var(--fg);
+        box-shadow: var(--bafShadow);
+        border-radius: 8px;
+    }
+
+    .audio-blog{
+        min-height: 100%;
+        padding-bottom: 4%;
+        background-color: var(--fg);
+    }
+
+    .audio-blog-players{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+        padding-top: 2%;
+    }
+
+    #audio-blog-player{
+        margin-top: 3px;
+        margin-bottom: 3px;
+    }
+
+    .audio-text{
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .hubcategories{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+
+    .hubwrapper:hover{
+        box-shadow: var(--bafShadowHover);
+        transform: translateY(-5px);
+        transition: transform .3s;
+    }
+
+    .hubcategories a{
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    .hubcategories a:hover{
+        transform: translateY(-5px);
+        transition: transform .3s;
+        text-decoration: underline;
+        text-decoration-color: var(--primary);
+        cursor: pointer;
+    }
+
+    .blogs-projects{
+        min-height: 80%;
+        background-color: var(--fg);
+    }
+
+    .blog-projects-text{
+        padding-left: 2%;
+    }
+
+    .videos{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        background-color: var(--fg);
+    }
+
+    .video-info{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-left: 3%;
+        padding-right: 3%;
+    }
+
+    .video-container{
+        display: flex;
+        width: 100%;
+        height: 100%;
+        justify-content: center;
+    }
+
+    .video-embed{
+        position: relative;
+        padding-bottom: 56.25%;
+        height: 0;
+        display: flex;
+        width: 96%;
+        justify-content: center;
+    }
+
+    .video-embed iframe{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+
+    @media only screen and (min-width: 600px){
+
+
+    .thehubinfo{
+        text-align: center;
+    }
+    .videos{
+    flex-direction: row-reverse;
+    }
+
+    .video-info{
+        padding-left: 3%;
+        padding-right: 3%;
+        align-items: flex-end;
+        width: 40%;
+    }
+
+    .video-info p{
+        text-align: right;
+    }
+
+        .audio-blog{
+            display: flex;
+            justify-content: center;
+            min-height: 80%;
+            align-items: center;
+
+        }
+
+        .audio-text{
+            padding-left: 2%;
+            padding-right: 2% !important;
+            width: 34%;
+        }
+
+        .audio-blog-players{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        #audio-blog-player{
+            margin: 5;
+        }
+
+        .button-div{
+            justify-content: unset !important;
+            padding-left: 0.5%;
+        }
+
+        .button-div button{
+            width: 100% !important;
+            height: 60 !important;
+            padding: 0 !important;
+        }
+
+        .blogs-projects{
+            display: flex;
+            flex-wrap: nowrap;
+        }
+    }
+
+</style>

@@ -38,6 +38,10 @@
                             title="YouTube Video">
                         </iframe>
                     {{ end }}
+
+                    {{with .Param "audio_link"}}
+                    <iframe src="{{ . }}?theme=0" width="100%" height="152" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+                    {{ end }}
                 </div>
 
 
