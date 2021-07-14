@@ -3,7 +3,6 @@
     width: 100%;
     min-height: 100%;
     flex-direction: column;
-    background-color: var(--bg);
     z-index: 1;
 }
 
@@ -13,6 +12,7 @@
     align-items: flex-start;
     width: 100%;
     justify-content: flex-start;
+    background-color: var(--bg);
 }
 
 /*
@@ -43,7 +43,7 @@
 
 
 .hero-picture{
-    display: none;
+    display: flex;
 }
 
 #heroCallToAction{

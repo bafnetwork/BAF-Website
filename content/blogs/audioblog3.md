@@ -2,7 +2,7 @@
 title: "Audio Blog 3"
 author: "Blockchain Acceleration Foundation"
 date: 
-categories: ["Audio Blog"]
+categories: ["Audio Blogs"]
 type: audio-blog
 tags: ["test", "tag"]
 featured_image: 

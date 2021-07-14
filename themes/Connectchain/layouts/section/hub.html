@@ -14,25 +14,26 @@
                             <h2 style = "padding-left: 2%;">The Hub</h2>
                             <p style = "padding-left: 2%;">Welcome! Here you can see the latest and greatest from BAF</p>    
                         </div>
-                        <div class = "hubsocialinfo">
-                            <div class="social" id = "hubsocials" style = "justify-content: flex-start;">
-                                <a href="https://twitter.com/TheBAFNetwork" target="_blank"><i id="social-btn" class="fa fa-twitter fa-2x"></i></a>
-                                <a href="https://www.linkedin.com/company/thebafnetwork/" target="_blank"><i id="social-btn" class="fa fa-linkedin fa-2x"></i></a>
-                                <a href="https://www.facebook.com/TheBAFNetwork/" target="_blank"><i id="social-btn" class="fa fa-facebook-official fa-2x"></i></a>
-                                <a href="https://t.me/joinchat/F70K2BCPSN0huhYtb_8jLQ" target="_blank"><i id="social-btn" class="fa fa-telegram fa-2x"></i></a>
-                                <a href="https://medium.com/@BAF1" target="_blank"><i id="social-btn" class="fa fa-medium fa-2x"></i></a>
-                                <a href="https://www.youtube.com/channel/UClN34KJfDsCVRs8rJHXH_-A" target="_blank"><i id="social-btn" class="fa fa-youtube-play fa-2x"></i></a>
-                            </div>
-                            <h5 style = 'width: 100%; text-align: center; margin-top: -2%; padding-top: 3%;'> Follow Us on Social! </h5>
-        
+                        <div class = "hubcategories">
+                            <a href = "/categories/blogs"><h3>Blogs</h3></a>
+                            <a href = "/categories/projects"><h3>Projects</h3></a>
+                            <a href = "/categories/videos"><h3>Videos</h3></a>
+                            <a href = "/categories/audio-blogs"><h3>Audio Blogs</h3></a>
                         </div>
                     </div>
                 </div>
-                <div class = "hubcategories">
-                    <a><h3>Blogs</h3></a>
-                    <a><h3>Projects</h3></a>
-                    <a><h3>Videos</h3></a>
-                    <a><h3>Audio Blogs</h3></a>
+
+                <div class = "hubsocialinfo">
+                    <div class="social" id = "hubsocials" style = "justify-content: flex-start;">
+                        <a href="https://twitter.com/TheBAFNetwork" target="_blank"><i id="social-btn" class="fa fa-twitter fa-2x"></i></a>
+                        <a href="https://www.linkedin.com/company/thebafnetwork/" target="_blank"><i id="social-btn" class="fa fa-linkedin fa-2x"></i></a>
+                        <a href="https://www.facebook.com/TheBAFNetwork/" target="_blank"><i id="social-btn" class="fa fa-facebook-official fa-2x"></i></a>
+                        <a href="https://t.me/joinchat/F70K2BCPSN0huhYtb_8jLQ" target="_blank"><i id="social-btn" class="fa fa-telegram fa-2x"></i></a>
+                        <a href="https://medium.com/@BAF1" target="_blank"><i id="social-btn" class="fa fa-medium fa-2x"></i></a>
+                        <a href="https://www.youtube.com/channel/UClN34KJfDsCVRs8rJHXH_-A" target="_blank"><i id="social-btn" class="fa fa-youtube-play fa-2x"></i></a>
+                    </div>
+                    <h5 style = 'width: 100%; text-align: center; margin-top: -2%; padding-top: 3%;'> Follow Us on Social! </h5>
+
                 </div>
             </div>
 
@@ -41,20 +42,23 @@
             <div class = "blogs-projects">
                 <div class = "blog-projects-text">
                     <h2>Latest from BAF</h2>
-                    <div class = "button-div" style = "display: flex; width: 100%; justify-content: center;"><button style = "width: 50%; margin-top: 0!important;">More blogs & projects</button></div>    
+                    <div class = "button-div" style = "display: flex; width: 100%; justify-content: center; margin-bottom: 5px;"><button style = "width: 50%; margin-top: 0!important;"><a style = "text-decoration: none; color: white;" href = "/categories/blogs/">More blogs</a></button></div>
+                    <div class = "button-div" style = "display: flex; width: 100%; justify-content: center; margin-top: 5px;"><button style = "width: 50%; margin-top: 0!important;"><a style = "text-decoration: none; color: white;" href = "/categories/projects/">More projects</a></button></div>    
+   
                 </div>
                 <div class = "cards-container">
 
 
                     {{ range first 3 (where .Site.RegularPages "Type" "in" (slice "blog" "project")) }}
 
-                    <a class = "blog-link" style = "display: flex; width: 100%; justify-content: center;" href = "{{ .RelPermalink }}">
+                    <a class = "blog-link" style = "display: flex; width: 100%; justify-content: center; text-decoration: none;" href = "{{ .RelPermalink }}">
                         <div class = "card hub-card">
                             {{ with .Param "featured_image" }}
                                 <img src = "{{ . }}" style = "width: 100%;">
                             {{ end }}
     
                             <h3>{{ .Title }}</h3>
+                            <p>by {{ .Param "author" }}</p>
     
                             <div class = "post-cat" style = "display: flex; width: 100%; padding-left: 2%;"> {{ if .Params.categories }}
                                 {{range .Params.categories}}
@@ -81,7 +85,8 @@
                 <div class = "video-info">
                     <h2>Videos</h2>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur officiis odit esse aspernatur cum alias. Cum vero, blanditiis eaque quos voluptatum cumque, minima amet rerum numquam debitis accusamus, consectetur ipsum.</p>
-                    <button>More Videos</button>
+                    <div class = "button-div" style = "display: flex; width: 100%; justify-content: center; margin-top: 5px;"><button style = "width: 50%; margin-top: 0!important;"><a style = "text-decoration: none; color: white;" href = "/categories/videos/">More videos</a></button></div>    
+
                 </div>
 
                 {{ range first 1 (where .Site.RegularPages "Type" "video") }}
@@ -100,7 +105,7 @@
                 <div class = "audio-text" style = "padding-right: 5%; padding-left: 2%;">
                     <h2>Audio Blogs</h2>
                     <p>BAF creates audio versions of the most influential crypto blogs and papers in the space -- listen to crypto's greatest works now</p>
-                    <button>More Audio Blogs</button>
+                    <div class = "button-div" style = "display: flex; width: 100%; justify-content: center; margin-top: 5px;"><button style = "width: 50%; margin-top: 0!important;"><a style = "text-decoration: none; color: white;" href = "/categories/audio-blogs/">More Audio Blogs</a></button></div>    
                 </div>
                 <div class = "audio-blog-players">
 
@@ -202,6 +207,7 @@
     .hubcategories a{
         margin-left: 20px;
         margin-right: 20px;
+        text-decoration: none;
     }
 
     .hubcategories a:hover{
@@ -229,7 +235,7 @@
         padding: 0;
         padding-bottom: 4px;
         box-shadow: var(--bafShadow);
-        width: 80%;
+        width: 85%;
     }
 
     .hub-card:hover{
@@ -240,6 +246,11 @@
     .hub-card h3{
         color: var(--primary);
         padding-left: 2%;
+        margin-bottom: 20px;
+    }
+
+    .hubsocialinfo{
+        padding-top: 2%;
     }
 
     .post-btn{
