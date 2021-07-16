@@ -1,0 +1,166 @@
+{{partial "head.html" . }}
+
+{{partial "navbar.html" . }}
+
+<main>
+
+    <body class = "light">
+
+        <div class = "resources resourcesHero">
+
+            <div class = "resources-heroinfo">
+                <h1>Resources</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis tempore doloremque ea amet earum nihil, error eligendi, nulla officiis, ut laudantium? Earum doloribus autem ducimus, velit magnam sequi magni ea.</p>
+            </div>
+
+            <a href = "https://bafnetwork.notion.site/Curated-Content-201a4b8fb6b94b929757331514a7467f" target = "_blank" class = "notion-card" id = "hero-notion">
+                <img src = "/img/resources/notion.png">
+                <h3>Check out our Notion</h3>
+            </a>
+        </div>
+
+        <hr style = "width: 50%; background-color: var(--primary); border-radius: 8px; height: 1.6;">
+
+        <div class = "resources resourcesKnowledge">
+            <h2>Knowledge</h2>
+            <div class = "notion-cards-container">
+                <a href = "https://www.notion.so/bafnetwork/251fdebb87834448b2dbb728d7ec3515?v=3979f22a9a534269b1a6bd74ffebf4be" target = "_blank" class = "notion-card">
+                    <img src = '/img/resources/basics.svg'>
+                    <h3>Basics</h3>
+                </a>
+                <a href = "https://www.notion.so/bafnetwork/7e4fa9025f4044bf9271b6001f785845?v=27bd9409d461466fb743b43187746021" target = "_blank" class = "notion-card">
+                    <img src = '/img/resources/cryptoeconomics.svg'>
+                    <h3>Cryptoeconomics</h3>
+                </a>
+                <a href = "https://www.notion.so/bafnetwork/3b213b1ae9764cf0a8669773cf0ea806?v=6d1a6ddece9e4ae2b5c0a755c05b88cc" target = "_blank" class = "notion-card">
+                    <img src = '/img/resources/product.svg'>
+                    <h3>Product, Business Models & Fundraising</h3>
+                </a>
+                <a href = "https://www.notion.so/bafnetwork/72f42a9cfbd349749bd01afdbd516dca?v=1a5523ae79514c0393a4734d4fffc587" target = "_blank" class = "notion-card">
+                    <img src = '/img/resources/philosophy.svg'>
+                    <h3>Philosophy & Politics</h3>
+                </a>
+                <a href = "https://www.notion.so/bafnetwork/df4976b7f599459ba0cf6eeeabebcb76?v=642656b40f754e9396c5197c2a1bc0d1" target = "_blank" class = "notion-card">
+                    <img src = '/img/resources/DAOs.svg'>
+                    <h3>DAOs</h3>
+                </a>
+            </div>
+        </div>
+
+        <div class = "resources resourcesSkills" style = "padding-bottom: 4%;">
+            <h2>Skills</h2>
+            <div class = "notion-cards-container">
+                <a href = "https://www.notion.so/bafnetwork/Web-Dev-8884106955b647bd9207b2317f1e058c" target = "_blank" class = "notion-card">
+                    <img src = '/img/resources/WebDev.svg'>
+                    <h3>Web Dev</h3>
+                </a>
+                <a href = "https://www.notion.so/bafnetwork/Rust-f8923423c8be47eabc230c73c6b12f40" target = "_blank" class = "notion-card">
+                    <img src = '/img/resources/Rust.svg'>
+                    <h3>Rust</h3>
+                </a>
+                <a href = "https://www.notion.so/bafnetwork/Smart-Contracts-5fc090ff3552456a83c1571c6e81a79d" target = "_blank" class = "notion-card">
+                    <img src = '/img/resources/SmartContracts.svg'>
+                    <h3>Smart Contracts</h3>
+                </a>
+            </div>
+        </div>
+
+
+    </body>
+
+
+    <!-- particles.js container -->
+    <div id="particles-js"></div>
+    <!-- particles.js lib - https://github.com/VincentGarreau/particles.js -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"> </script>
+    <script>particlesJS("particles-js", {"particles":{"number":{"value":115,"density":{"enable":true,"value_area":800}},"color":{"value":"#003262"},"shape":{"type":"triangle","stroke":{"width":0,"color":"#000000"},"polygon":{"nb_sides":5},"image":{"src":"img/github.svg","width":100,"height":100}},"opacity":{"value":0.78831137628638925,"random":true,"anim":{"enable":true,"speed":0.3,"opacity_min":0.1,"sync":false}},"size":{"value":12.00864934128859,"random":true,"anim":{"enable":false,"speed":40,"size_min":0.1,"sync":false}},"line_linked":{"enable":true,"distance":150,"color":"#87D3DD","opacity":0.4,"width":1},"move":{"enable":true,"speed":0.3,"direction":"none","random":false,"straight":false,"out_mode":"out","bounce":false,"attract":{"enable":false,"rotateX":600,"rotateY":1200}}},"interactivity":{"detect_on":"canvas","events":{"onhover":{"enable":true,"mode":"grab"},"onclick":{"enable":true,"mode":"push"},"resize":true},"modes":{"grab":{"distance":206.8445259204582,"line_linked":{"opacity":1}},"bubble":{"distance":400,"size":40,"duration":2,"opacity":8,"speed":3},"repulse":{"distance":200,"duration":0.4},"push":{"particles_nb":4},"remove":{"particles_nb":2}}},"retina_detect":true});var count_particles, stats, update; stats = new Stats; stats.setMode(0); stats.domElement.style.position = 'absolute'; stats.domElement.style.left = '0px'; stats.domElement.style.top = '0px'; document.body.appendChild(stats.domElement); count_particles = document.querySelector('.js-count-particles'); update = function() { stats.begin(); stats.end(); $(window).trigger('resize'); if (window.pJSDom[0].pJS.particles && window.pJSDom[0].pJS.particles.array) { count_particles.innerText = window.pJSDom[0].pJS.particles.array.length; } requestAnimationFrame(update); }; requestAnimationFrame(update);;</script>
+    <script>$(window).trigger('resize');</script>
+    <style>#particles-js {width: 100%;height: 100%;position: fixed;z-index: -1;top: 0;left: 0; right: 0;}
+    #particle-js canvas{transform: scale(1); opacity: 1; z-index: -1;}</style>
+
+</main>
+
+{{partial "footer.html" . }}
+
+
+<style>
+
+    .resources{
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .resourcesHero{
+        flex-direction: column;
+        padding-left: 2%;
+        width: 98%;
+        align-items: center;
+        background-color: var(--bg);
+        padding-bottom: 4%;
+    }
+
+    #hero-notion{
+        align-items: center;
+        width: 80%;
+    }
+
+    .notion-cards-container{
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        justify-content: space-evenly;
+    }
+
+    .notion-card{
+        display: flex;
+        box-shadow: var(--bafShadow);
+        border-radius: 8px;
+        background-color: var(--fgDark);
+        width: 65%;
+        justify-content: center;
+        margin: 5px;
+        padding: 2%;
+        text-decoration: none;
+    }
+
+    .notion-card:hover{
+        box-shadow: var(--bafShadowHover);
+        transform: translateY(-5px);
+        transition: transform .3s;
+    }
+
+    .notion-card img{width: 27%;}
+
+    .notion-card h3{padding-left: 5%; font-size: 1.5rem;}
+
+
+    @media only screen and (min-width: 600px) {
+
+        #hero-notion{
+            width: 45%;
+        }
+
+        .resourcesHero{
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .resources-heroinfo{
+            width: 30%;
+            padding: 2%;
+            height: 10%;
+        }
+
+        .notion-card{
+            width: fit-content;
+            min-width: 40%;
+            margin: 10px;
+        }
+
+        .notion-card h3{font-size: 2rem;}
+    }
+
+
+</style>
