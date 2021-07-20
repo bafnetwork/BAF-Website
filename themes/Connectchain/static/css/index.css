@@ -302,7 +302,52 @@ Button:hover:not(.owl-dot):not(.owl-prev):not(.owl-next):not(.post-btn) {
 
 #stats{
     background-color: var(--fgElementSecondary);
-    height: 50%;
+    height: fit-content;
+    min-height: 45%;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.stat-section{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.stat{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5px;
+}
+
+.stat h2{
+    padding-right: 5px;
+    z-index: 3;
+    font-size: 1.4rem;
+}
+
+.stat p{
+    float: left;
+    line-height: 1.4;
+    text-transform: uppercase;
+    z-index: 3;
+    font-weight: 600;
+    color: var(--primary);
+    font-size: 1rem;
+}
+
+.stat svg{
+    margin-left: -45%;
+    z-index: 1;
+    max-width: 45%;
+}
+
+#drawing-fill{
+    fill: var(--drawing-color);
 }
 
 
@@ -388,4 +433,28 @@ Button:hover:not(.owl-dot):not(.owl-prev):not(.owl-next):not(.post-btn) {
         flex-wrap: nowrap;
     }
 
+    #stats{
+        display: flex;
+        flex-direction: row;
+    }
+
+    .stat-section{
+        width: 50%;
+        flex-direction: row;
+        justify-content: normal;
+    }
+
+    .stat h2{font-size: 3rem;}
+
+    .stat p{
+        font-size: 1.2rem;
+    }
+
+    .stat svg{
+        max-width: none;
+    }
+
+    #events-organized{
+        margin-left: -4%;
+    }
 }
