@@ -24,7 +24,7 @@
 
                         <div class = "post-cat"> {{ if .Params.categories }}
                             {{range .Params.categories}}
-                            <button class = "post-btn" id = "cat-btn" href="{{ "/categories/" | relLangURL }}{{ . | urlize }}"><h5 style = "margin: 0; color: white;">A {{ . | singularize}}</h5></button> 
+                            <button class = "post-btn" id = "cat-btn" href="{{ "/categories/" | relLangURL }}{{ . | urlize }}"><h5 style = "margin: 0; color: white;">{{ . | singularize}}</h5></button> 
                             {{end}}
                             {{end}} 
                         </div>

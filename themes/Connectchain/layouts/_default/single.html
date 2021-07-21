@@ -12,7 +12,7 @@
             <p class = "post-date">{{ .Date.Format "Mon, Jan 2, 2006" }}</p>
             <div class = "post-cat"> {{ if .Params.categories }}
                 {{range .Params.categories}}
-                <button class = "post-btn" id = "cat-btn" href="{{ "/categories/" | relLangURL }}{{ . | urlize }}">{{ . }}</button> 
+                <button class = "post-btn" id = "cat-btn" href="{{ "/categories/" | relLangURL }}{{ . | urlize }}">{{ . | singularize }}</button> 
                 {{end}}
                 {{end}} 
             </div>

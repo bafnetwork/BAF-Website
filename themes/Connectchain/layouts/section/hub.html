@@ -51,7 +51,7 @@
 
                     {{ range first 3 (where .Site.RegularPages "Type" "in" (slice "blog" "project")) }}
 
-                    <a class = "blog-link" style = "display: flex; width: 100%; justify-content: center; text-decoration: none;" href = "{{ .RelPermalink }}">
+                    <a class = "blog-link" style = "display: flex; width: 85%; justify-content: center; text-decoration: none;" href = "{{ .RelPermalink }}">
                         <div class = "card hub-card">
                             {{ with .Param "featured_image" }}
                                 <img src = "{{ . }}" style = "width: 100%;">
@@ -62,7 +62,7 @@
     
                             <div class = "post-cat" style = "display: flex; width: 100%; padding-left: 2%;"> {{ if .Params.categories }}
                                 {{range .Params.categories}}
-                                <button class = "post-btn" id = "cat-btn" href="{{ "/categories/" | relLangURL }}{{ . | urlize }}"><h5 style = "color: var(--elementTextPrimary); padding: 0; margin: 0; text-align: left; width: 100%;">A {{ . }}</h5></button> 
+                                <button class = "post-btn" id = "cat-btn" href="{{ "/categories/" | relLangURL }}{{ . | urlize }}"><h5 style = "color: var(--elementTextPrimary); padding: 0; margin: 0; text-align: left; width: 100%;">{{ . | singularize }}</h5></button> 
                                 {{end}}
                                 {{end}} 
                             </div>
@@ -235,7 +235,7 @@
         padding: 0;
         padding-bottom: 4px;
         box-shadow: var(--bafShadow);
-        width: 85%;
+        width: 100%;
     }
 
     .hub-card:hover{

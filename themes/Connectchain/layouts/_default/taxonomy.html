@@ -24,7 +24,7 @@
 
                         <div class = "post-cat"> {{ if .Params.categories }}
                             {{range .Params.categories}}
-                            <button class = "post-btn" id = "cat-btn" href="{{ "/categories/" | relLangURL }}{{ . | urlize }}"><h5 style = "margin: 0; color: white;">A {{ . | singularize}}</h5></button> 
+                            <button class = "post-btn" id = "cat-btn" href="{{ "/categories/" | relLangURL }}{{ . | urlize }}"><h5 style = "margin: 0; color: white;">{{ . | singularize}}</h5></button> 
                             {{end}}
                             {{end}} 
                         </div>
@@ -68,17 +68,18 @@
         margin: 10px;
         text-decoration: none;
         background-color: var(--fgDark);
-        width: 47%;
+        width: 90%;
     }
 
     .content-card{
         display: flex;
+        flex-direction: column;
     }
 
     .content-card img{
         border-top-left-radius: 8px;
-        border-bottom-left-radius: 8px;
-        width:50%;
+        border-top-right-radius: 8px;
+        width:100%;
     }
 
     .content-info{
@@ -114,4 +115,20 @@
         background-color: var(--secondary);
     }
 
+/* DESKTOP STARTS HERE*/
+@media only screen and (min-width: 600px){
+    .content-card-container{
+        width: 47%;
+    }
+
+    .content-card{
+        flex-direction: row;
+    }
+
+    .content-card img{
+        border-top-left-radius: 8px;
+        border-bottom-left-radius: 8px;
+        width:50%;
+    }
+}
 </style>
