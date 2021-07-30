@@ -15,15 +15,43 @@
 
                 <div class = "cards-container" id = "membertype-container">
 
-                    <div class = "card side-card member-card" id = "donate-btc">
+                    <div class = "card side-card member-card" id = "members">
+                        <img src = "/img/Icons/members.svg">
+                        <h3>Members</h3>
+                        <ul>
+                            <li>Events</li>
+                            <li>Discord</li>
+                            <li>Newsletter</li>
+                            <li>Community Calls</li>
+                            <li>Educational Resources</li>
+                        </ul>
                     </div>
 
-                    <div class = "card center-card member-card" id = "donate-eth">
+                    <div class = "card center-card member-card" id = "core-members">
+                        <img src = "/img/Icons/core-member.svg">
+                        <h3>Core Members</h3>
+                        <ul>
+                            <li>Everything in basic membership</li>
+                            <li>Free or subsidized tickets to paid events</li>
+                            <li>Access to BAF Recruiting</li>
+                            <li>Access to BAF Research</li>
+                            <li>Ability to propose & contribute to projects</li>
+                            <li>Assistance sourcing speakers & sponsors for events</li>
+                            <li>Compensation</li>
+                        </ul>
                     </div>
 
-                    <div class = "card side-card member-card" id = "donate-dai">
+                    <div class = "card side-card member-card" id = "institutional-members">
+                        <img src = "/img/Icons/institution.svg">
+                        <h3>Institutions (Invite Only)</h3>
+                        <ul>
+                            <li>Everything in basic membership</li>
+                            <li>Access to BAF Recruiting</li>
+                            <li>Ability to participate in and suggest working groups</li>
+                            <li>Sponsorship discounts & priority</li>
+                            <li>pportunity to incorporate educational material in our university-accredited blockchain courses</li>
+                        </ul>
                     </div>
-
                 </div>                
             </div>
 
@@ -79,4 +107,15 @@
         width: 95%;
     }
 
+    #core-members li{
+    color: var(--elementTextPrimary);
+}
+
+.member-card li {
+    color: var(--elementTextSecondary);
+}
+
+.member-card h3{
+    margin: 0 2% 0 0;
+}
 </style>
