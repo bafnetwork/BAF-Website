@@ -38,6 +38,8 @@
 --sponsors-protocol-darkmode: url('/img/donors/protocol-labs-white.png');
 --gitcoin-logo: url('/img/gitcoin-logo.svg');
 --gitcoin-logo-darkmode: url('/img/gitcoin-logo-darkmode.svg');
+--transparent-logo: url('/img/Backgrounds/Transparent-Logo.png');
+--transparent-logodark: url('/img/Backgrounds/Transparent-LogoDark.png');
 
 }
 
@@ -80,6 +82,7 @@
     --sponsors-protocol-labs: var(--sponsors-protocol-lightmode);
     --sponsors-algorand: var(--sponsors-algorand-lightmode);
     --gitcoin-banner-logo: var(--gitcoin-logo);
+    --transparent-bg: var(--transparent-logo);
 
     --drawing-color: var(--drawing-fill-pronounced);
 }
@@ -122,7 +125,7 @@
     --sponsors-protocol-labs: var(--sponsors-protocol-darkmode);
     --sponsors-algorand: var(--sponsors-algorand-darkmode);
     --gitcoin-banner-logo: var(--gitcoin-logo-darkmode);
-
+    --transparent-bg: var(--transparent-logodark);
     --drawing-color: var(--drawing-fill-subdued);
 }
 
@@ -133,6 +136,12 @@
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+
 
 body{
     margin: 0;
@@ -167,7 +176,7 @@ h5{
 }
 
 p, a, li {
-    font-size: 1.2rem;
-    font-family: 'Lato', sans-serif;
+    font-size: 1.4rem;
+    font-family: 'futura', sans-serif;
     color: var(--textNormal);
 }
